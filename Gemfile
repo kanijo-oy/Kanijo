@@ -56,3 +56,4 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'active_storage_drag_and_drop'
 gem 'crack'
 gem 'devise'
+gem 'omniauth-google-oauth2'
