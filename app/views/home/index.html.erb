@@ -4,7 +4,7 @@ curdate= nil
 @entries.each do |e| %>
 <% if e.day != curdate
   curdate = e.day%>
-   <h2><%=e.day%></h2>
+   <h2><%=e.day.strftime("%A %d.%m.")%></h2>
  <% end %>
  <span id='log-<%=e.id%>'>
    <%= render 'log_entries/row', object: e %>

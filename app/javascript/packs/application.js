@@ -20,13 +20,11 @@ ActiveStorageDragAndDrop.start()
 window.jQuery = $;
 window.$ = $;
 window.asdd = ActiveStorageDragAndDrop;
-var callback = function(error) {
-  if (error) {
-    // …handle error…
-  } else {
-    // …do your stuff
-  }
-}
+
+import { library, dom } from '@fortawesome/fontawesome-svg-core'
+import { fas } from '@fortawesome/free-solid-svg-icons'
+library.add(fas)
+dom.watch()
 
 //ActiveStorageDragAndDrop.processUploadQueue("x", callback);
 

@@ -29,6 +29,8 @@
           <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
         </form>
         -->
+        <p class="notice"><%= notice %></p>
+        <p class="alert"><%= alert %></p>
         <%=image_tag 'uk.png', height: 40%>&nbsp;
         <%=image_tag 'fin.png', height: 40%>&nbsp;
         <%=image_tag 'swe.png', height: 40%>
@@ -36,11 +38,6 @@
     </nav>
 
     <main role="main" class="container">
-      <br /><br />
-      <br />
-       <p class="notice"><%= notice %></p>
-       <p class="alert"><%= alert %></p>
-
        <%= yield %>
     </main>
   </body>

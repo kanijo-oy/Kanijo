@@ -60,6 +60,7 @@ class LogEntriesController < ApplicationController
     respond_to do |format|
       format.html { redirect_to log_entries_url, notice: 'Log entry was successfully destroyed.' }
       format.json { head :no_content }
+      format.js { render :destroy }
     end
   end
 

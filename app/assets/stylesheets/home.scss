@@ -2,10 +2,25 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
 
+main.container {
+  margin-top: 60px;
+
+}
+
 label.asdndzone {
-max-width: 200px;
-min-height: 50px;
-padding: 0em;
-padding-top: 1em;
-border: none;
+  max-width: 200px;
+  min-height: 50px;
+  padding: 0em;
+  padding-top: 1em;
+  border: none;
+}
+
+h2 {
+  font-size: 140%;
+  font-weight: bold;
+  padding-top: 0.5em;
+}
+
+a svg {
+  color: black;
 }
