@@ -24,7 +24,7 @@ class LogEntriesController < ApplicationController
   # POST /log_entries
   # POST /log_entries.json
   def create
-    @log_entry = LogEntry.new(log_entry_params)
+    @log_entry = LogEntry.new(log_entry_params.merge(user: current_user))
 
     respond_to do |format|
       if @log_entry.save

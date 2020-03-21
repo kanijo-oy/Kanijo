@@ -11,7 +11,7 @@ Rails.application.configure do
 
   # Show full error reports.
   config.consider_all_requests_local = true
-  config.web_console.permissions = '10.6.129.55'
+  config.web_console.permissions = %w(10.6.129.55 88.115.180.97)
 
   # Enable/disable caching. By default caching is disabled.
   # Run rails dev:cache to toggle caching.

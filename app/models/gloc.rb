@@ -3,6 +3,8 @@ require 'crack'
 class Gloc < ApplicationRecord
   has_many_attached :uploads
 
+  attribute :user
+
   before_save :parse_upload
   def parse_upload
     return unless uploads.attached?
@@ -13,7 +15,7 @@ class Gloc < ApplicationRecord
           next unless place.is_a? Hash
           next unless place.dig('TimeSpan', 'begin')
           ts = Time.parse(place['TimeSpan']['begin'])
-          LogEntry.new(day: ts, time: ts, description: place['name']).save
+          LogEntry.new(day: ts, time: ts, description: place['name'], user: user).save
         end
       end
     end

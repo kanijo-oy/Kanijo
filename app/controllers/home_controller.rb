@@ -3,7 +3,7 @@ class HomeController < ApplicationController
   def index
     @log = LogEntry.new(day: Date.today, time: Time.now.localtime.strftime("%H:%M"))
     @google = Gloc.new()
-    @entries = LogEntry.all.order(:day, :time)
+    @entries = LogEntry.all.where(user: current_user).order(:day, :time)
   end
 
   def policy

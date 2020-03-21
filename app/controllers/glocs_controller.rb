@@ -1,6 +1,6 @@
 class GlocsController < ApplicationController
   def create
-    @gloc = Gloc.new(params.require(:gloc).permit(uploads: []))
+    @gloc = Gloc.new(params.require(:gloc).permit(uploads: []).merge(user: current_user))
 
     respond_to do |format|
       if @gloc.save
