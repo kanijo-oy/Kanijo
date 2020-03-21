@@ -10,6 +10,8 @@ class Gloc < ApplicationRecord
       f.download do |dd|
         doc = Crack::XML.parse(dd)
         doc['kml']['Document']['Placemark'].each do |place|
+          next unless place.is_a? Hash
+          next unless place.dig('TimeSpan', 'begin')
           ts = Time.parse(place['TimeSpan']['begin'])
           LogEntry.new(day: ts, time: ts, description: place['name']).save
         end

@@ -1,0 +1,18 @@
+<%= form_with(model: @log_entry, local: false, remote: true) do |form| %>
+  <% if @log_entry.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@log_entry.errors.count, "error") %> prohibited this log_entry from being saved:</h2>
+
+      <ul>
+        <% @log_entry.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+    <%= form.text_field :time, size: 5 %>
+    <%= form.text_field :description, size: 20 %>
+
+    <%= form.submit 'Save' %>
+<% end %>

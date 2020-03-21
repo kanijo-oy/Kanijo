@@ -45,6 +45,7 @@ class LogEntriesController < ApplicationController
       if @log_entry.update(log_entry_params)
         format.html { redirect_to @log_entry, notice: 'Log entry was successfully updated.' }
         format.json { render :show, status: :ok, location: @log_entry }
+        format.js { render :update }
       else
         format.html { render :edit }
         format.json { render json: @log_entry.errors, status: :unprocessable_entity }
