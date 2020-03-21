@@ -6,6 +6,6 @@ class LogEntry < ApplicationRecord
 
   def time
     return '' unless super && super.time
-    super.time.localtime.strftime("%H:%M")
+    super.time.strftime('%H:%M')
   end
 end

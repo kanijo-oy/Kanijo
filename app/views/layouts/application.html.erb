@@ -4,6 +4,8 @@
     <title>Kanijo</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <%= stylesheet_link_tag '//ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/le-frog/jquery-ui.min.css' %>
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -29,15 +31,21 @@
           <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
         </form>
         -->
-        <p class="notice"><%= notice %></p>
-        <p class="alert"><%= alert %></p>
-        <%=image_tag 'uk.png', height: 40%>&nbsp;
-        <%=image_tag 'fin.png', height: 40%>&nbsp;
-        <%=image_tag 'swe.png', height: 40%>
       </div>
     </nav>
+    <div class='langbar'>
+      <%=image_tag 'uk.png', class: 'flag flag-active'%>
+      <%=image_tag 'fin.png', class: 'flag'%>
+      <%=image_tag 'swe.png', class: 'flag'%>
+    </div>
 
     <main role="main" class="container">
+      <% if notice %>
+        <p class="alert alert-info"><%= notice %></p>
+      <% end %>
+      <% if alert %>
+        <p class="alert alert-danger"><%= alert %></p>
+      <% end %>
        <%= yield %>
     </main>
   </body>

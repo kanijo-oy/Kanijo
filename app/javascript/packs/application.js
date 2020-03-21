@@ -26,6 +26,15 @@ import { fas } from '@fortawesome/free-solid-svg-icons'
 library.add(fas)
 dom.watch()
 
+import SimplePicker from 'simplepicker'
+window.SimplePicker = SimplePicker
+
+import moment from 'moment'
+window.moment = moment
+
+//import TheDatepicker from 'thedatepicker/dist/the-datepicker'
+//window.TheDatepicker = TheDatepicker;
+
 //ActiveStorageDragAndDrop.processUploadQueue("x", callback);
 
 // Uncomment to copy all static images under ../images to the output folder and reference

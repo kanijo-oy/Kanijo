@@ -13,6 +13,7 @@ curdate= nil
 </p>
 
 
+
 <%
 def tlurl(day)
   "https://www.google.fi/maps/timeline/kml?authuser=0&pb=!1m8!1m3!1i%u!2i%u!3i%u!2m3!1i%u!2i%u!3i%u" % [day.year, day.month-1, day.day, day.year, day.month-1, day.day]
@@ -21,40 +22,63 @@ end
 %>
 
 <%= form_with(model: @log, local: true) do |form| %>
-  <%=form.text_field :description, size: 50, placeholder: 'Where have you been, how many close contacts' %>
-  &nbsp;
-  <%=image_tag 'calendar.png', height: 30%> 
-  <%=form.date_field :day, size: 8 %>
-  &nbsp;
-  <%=image_tag 'clock.png', height: 30%> 
-  <%=form.text_field :time, size: 4 %>
-  <%=form.submit 'Save' %>
+  <div class="row">
+    <div class='col'>
+      <%=form.text_field :description, size: 50, placeholder: 'Where have you been, how many close contacts', class: 'form-control' %>
+      &nbsp;
+    </div>
+  </div>
+  <div class="row">
+    <div class='col-3'>
+      <%#=image_tag 'clock.png', height: 30%> 
+      <%=form.text_field :time, size: 4, class: 'form-control' %>
+    </div>
+    <div class='col'>
+      <%=image_tag 'calendar.png', height: 30, onclick: 'openCal()'%> 
+      <%=form.hidden_field :day, size: 8 %>
+      &nbsp;
+      <%=form.submit 'Save', class: 'btn btn-primary' %>
+    </div>
+  </div>
 <% end %>
+<script>
+  var dp = new SimplePicker({disableTimeSection: false, compactMode: true});
+function openCal() {
+  dp.open();
+  dp.disableTimeSection();
+}
+dp.on('submit', function(d1, d2) {
+  var ts = moment(d1);
+  $('#log_entry_day').val(ts.format("YYYY-MM-DD"));
+});
+</script>
+<hr />
 
-<br /><br />
 <%= form_with(model: @google, local: true, id: 'gupload') do |form| %>
-  <table>
-    <tr><td>
-        <center>
-  <%=image_tag 'dl.png', height: 120, style: 'margin-top: 50px' %> <br />
-        </center>
-  <span style="font-family: 'Nunito Sans', sans-serif;
-  font-size: 21px;">
-  Download history<br />
-  </span>
-  <%=link_to 'Today', tlurl(Date.today) %> <br />
-  <%=link_to '1 day ago', tlurl(Date.today - 1) %> <br />
-  <%=link_to '2 days ago', tlurl(Date.today - 2) %> <br />
-  <%=link_to '3 days ago', tlurl(Date.today - 3) %> <br />
-      </td>
-      <td>
-  <%=form.drag_and_drop_file_field :uploads do%>
-    <%=image_tag 'upload.png', height: 120 %> <br />
-    Drag here or click to select
-  <% end %>
-      </td><td>
-  <center>
-  <%=form.submit 'Save' %>
-  </center>
-      </td>
+  <div class='row justify-content-center'>
+    <div class='col-auto'>
+      <center>
+        <%=image_tag 'dl.png', height: 120 %> <br />
+        <span style="font-family: 'Nunito Sans', sans-serif; font-size: 21px;">
+          Download history<br />
+        </span>
+      </center>
+      <div style='padding-left: 1em'>
+        <%=link_to 'Today', tlurl(Date.today) %> <br />
+        <%=link_to '1 day ago', tlurl(Date.today - 1) %> <br />
+        <%=link_to '2 days ago', tlurl(Date.today - 2) %> <br />
+        <%=link_to '3 days ago', tlurl(Date.today - 3) %> <br />
+        <br />
+      </div>
+    </div>
+    <div class='col-auto'>
+      <%=form.drag_and_drop_file_field :uploads do%>
+        <%=image_tag 'upload.png', height: 120 %> <br />
+        Drag here or click to select
+      <% end %>
+      <center>
+        <%=form.submit 'Send', class: 'btn btn-primary' %>
+      </center>
+    </div>
+  </div>
 <% end %>
