@@ -1,0 +1,31 @@
+<p>
+<%
+curdate= nil
+@entries.each do |e| %>
+<% if e.day != curdate
+  curdate = e.day%>
+   <h2><%=e.day%></h2>
+ <% end %>
+ <%=e.time.localtime.strftime("%H:%M") rescue ''%> <%=e.description%> <br />
+<% end %>
+</p>
+
+
+<%
+def tlurl(day)
+  "https://www.google.fi/maps/timeline/kml?authuser=0&pb=!1m8!1m3!1i%u!2i%u!3i%u!2m3!1i%u!2i%u!3i%u" % [day.year, day.month-1, day.day, day.year, day.month-1, day.day]
+end
+
+%>
+
+<%= form_with(model: @log, local: true) do |form| %>
+  <%=form.text_field :description %>
+  <%=form.submit 'Save' %>
+<% end %>
+
+<%= form_with(model: @google, local: true) do |form| %>
+  <h3>Download your Google location history</h3>
+  <%=link_to 'Yesterday', tlurl(Date.today - 1) %>
+  <%=link_to 'Today', tlurl(Date.today) %>
+  <%=form.drag_and_drop_file_field :uploads %>
+<% end %>

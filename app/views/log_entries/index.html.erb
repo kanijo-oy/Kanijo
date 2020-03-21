@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Log Entries</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Day</th>
+      <th>Time</th>
+      <th>Description</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @log_entries.each do |log_entry| %>
+      <tr>
+        <td><%= log_entry.day %></td>
+        <td><%= log_entry.time %></td>
+        <td><%= log_entry.description %></td>
+        <td><%= link_to 'Show', log_entry %></td>
+        <td><%= link_to 'Edit', edit_log_entry_path(log_entry) %></td>
+        <td><%= link_to 'Destroy', log_entry, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Log Entry', new_log_entry_path %>
