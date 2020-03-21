@@ -799,6 +799,12 @@
   dependencies:
     spark-md5 "^3.0.0"
 
+"@rails/activestorage@https://github.com/smartygus/activestorage":
+  version "6.0.2-1"
+  resolved "https://github.com/smartygus/activestorage#46eb549159507206c7ed6e5a4b2d5f8497f5c6a0"
+  dependencies:
+    spark-md5 "^3.0.0"
+
 "@rails/ujs@^6.0.0":
   version "6.0.2"
   resolved "https://registry.yarnpkg.com/@rails/ujs/-/ujs-6.0.2.tgz#8d32452d51c5e115374a218fb5475803dc17f4c0"
