@@ -81,5 +81,3 @@ test:
 production:
   <<: *default
   database: kanijo_production
-  username: kanijo
-  password: <%= ENV['KANIJO_DATABASE_PASSWORD'] %>
