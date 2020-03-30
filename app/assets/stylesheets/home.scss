@@ -47,20 +47,20 @@ a svg {
 }
 
 .navbar-brand {
-  background: url('app/assets/images/logo-white-95x.png');
-  background-position-y: 50%;
+  background: url('app/assets/images/logo-white-95x.png') !important;
+  background-position-y: 50% !important;
   background-repeat: no-repeat !important;
-  font-size: 0;
-  width: 95px;
-  height: 30px;
+  font-size: 0 !important;
+  width: 95px !important;
+  height: 30px !important;
 }
 
 #asdndz-gloc_uploads {
   /* border: 5px #8fd6ff solid; */
-  border: 5px #c7ebff dashed !important;
-  padding: 10px !important;
-  border-radius: 1em !important;
-  font-size: 21px !important;
+  border: 5px #c7ebff dashed;
+  padding: 10px;
+  border-radius: 1em;
+  font-size: 21px;
   /* width: 170px; */
   /* margin-left: 50px; */
 }
