@@ -42,6 +42,42 @@ a svg {
   height: 50px;
 }
 
+.navbar {
+  background-color: #369 !important;
+}
+
+.navbar-brand {
+  background: url('app/assets/images/logo-white-95x.png');
+  background-position-y: 50%;
+  background-repeat: no-repeat !important;
+  font-size: 0;
+  width: 95px;
+  height: 30px;
+}
+
+#asdndz-gloc_uploads {
+  /* border: 5px #8fd6ff solid; */
+  border: 5px #c7ebff dashed;
+  padding: 10px;
+  border-radius: 1em;
+  font-size: 21px;
+  /* width: 170px; */
+  /* margin-left: 50px; */
+}
+
+#col-left {
+}
+
+#col-right {
+  margin-left: 50px;
+  /* width: 280px; */
+}
+
+#gloc_uploads {
+  height: 0 !important;
+  display: none;
+}
+
 .help-blob {
   display: none;
   position: absolute;
