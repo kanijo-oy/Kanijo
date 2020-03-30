@@ -79,17 +79,19 @@ dp.on('submit', function(d1, d2) {
   <div class='row justify-content-center'>
     <div class='col-auto'>
       <center>
-        <%=image_tag 'dl.png', height: 120 %> <br />
+        <%# <%=image_tag 'dl.png', height: 120 %> <br />
         <span style="font-family: 'Nunito Sans', sans-serif; font-size: 21px;">
-          Download history<br />
+          Download your<br />location data<br />
         </span>
       </center>
-      <div style='padding-left: 1em'>
-        <%=link_to 'Today', tlurl(Date.today) %> <br />
-        <%=link_to '1 day ago', tlurl(Date.today - 1) %> <br />
-        <%=link_to '2 days ago', tlurl(Date.today - 2) %> <br />
-        <%=link_to '3 days ago', tlurl(Date.today - 3) %> <br />
-        <br />
+      <div>
+        <center>
+          <%=link_to 'Today', tlurl(Date.today) %> <br />
+          <%=link_to '1 day ago', tlurl(Date.today - 1) %> <br />
+          <%=link_to '2 days ago', tlurl(Date.today - 2) %> <br />
+          <%=link_to '3 days ago', tlurl(Date.today - 3) %> <br />
+          <br />
+        </center>
       </div>
     </div>
     <div class='col-auto'>
