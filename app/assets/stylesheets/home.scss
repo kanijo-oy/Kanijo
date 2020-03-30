@@ -25,6 +25,21 @@ a svg {
   color: black;
 }
 
+.help-blob {
+  display: none;
+  position: absolute;
+  left: 10px;
+  top: 80px;
+  width: 20%;
+  height: 30em;
+}
+@import 'bootstrap/scss/bootstrap';
+@include media-breakpoint-up(xl) {
+  .help-blob {
+    display: block;
+  }
+}
+
 .langbar {
   position: fixed;
   right: 0%;
@@ -76,20 +91,5 @@ a svg {
 #gloc_uploads {
   height: 0 !important;
   display: none;
-}
-
-.help-blob {
-  display: none;
-  position: absolute;
-  left: 10px;
-  top: 80px;
-  width: 20%;
-  height: 30em;
-}
-@import 'bootstrap/scss/bootstrap';
-@include media-breakpoint-up(xl) {
-  .help-blob {
-    display: block;
-  }
 }
 
