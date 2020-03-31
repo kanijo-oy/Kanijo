@@ -41,20 +41,20 @@ a svg {
 }
 
 .langbar {
-  position: fixed;
-  right: 0%;
-  top: 10%;
+  position: fixed !important;
+  right: 0% !important;
+  top: 10% !important;
 }
 
 .flag {
-  display:block;
-  height: 40px;
-  padding-left: 10px;
-  margin-bottom: 10px;
+  display:block !important;
+  height: 40px !important;
+  padding-left: 10px !important;
+  margin-bottom: 10px !important;
 }
 .flag-active {
-  padding-left: 0px;
-  height: 50px;
+  padding-left: 0px !important;
+  height: 50px !important;
 }
 
 .navbar {
