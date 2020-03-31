@@ -42,12 +42,18 @@ a svg {
 
 .langbar {
   position: fixed !important;
-  right: 0% !important;
-  top: 0% !important;
+  right: 16px !important;
+  top: 16px !important;
+  z-index: 9000;
+  color: #fff;
 }
 
 .langbar a, .langbar a:visited {
-  color: #fff;
+  color: rgba(255,255,255,0.5);
+}
+
+.langbar a:hover {
+  color: rgba(255,255,255,0.75);
 }
 
 .flag {
