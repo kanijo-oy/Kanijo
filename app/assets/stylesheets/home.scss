@@ -62,7 +62,7 @@ a svg {
 }
 
 .navbar-brand {
-  background: url('/assets/logo-white-95x.png') !important;
+  background-image: asset-url("logo-white-95x.png") !important;
   background-position-y: 50% !important;
   background-repeat: no-repeat !important;
   font-size: 0 !important;
