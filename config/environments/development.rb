@@ -62,7 +62,5 @@ Rails.application.configure do
   config.file_watcher = ActiveSupport::EventedFileUpdateChecker
 
   config.hosts << 'fermi'
-  config.hosts << 'kanijo.aketzu.net'
-  config.hosts << 'hoitopolku.aketzu.net'
   config.action_mailer.default_url_options = { host: 'fermi', port: 3000 }
 end
