@@ -1,20 +1,6 @@
 <div class="help-blob">
 </div>
 
-<p>
-<%
-curdate= nil
-@entries.each do |e| %>
-<% if e.day != curdate
-  curdate = e.day%>
-   <h2><%=e.day.strftime("%A %d.%m.")%></h2>
- <% end %>
- <span id='log-<%=e.id%>'>
-   <%= render 'log_entries/row', object: e %>
- </span>
-<% end %>
-</p>
-
 
 
 <%
@@ -24,31 +10,53 @@ end
 
 %>
 
+<h4 class="pt-4">Add manually</h4>
 <%= form_with(model: @log, local: true) do |form| %>
-  <div class="row">
-    <div class='col'>
-      <%=form.text_field :description, size: 50, placeholder: 'Where have you been, how many close contacts', class: 'form-control' %>
-      &nbsp;
+<div class="row mb-2">
+  <div class='col'>
+    <%=form.text_field :description, size: 50, placeholder: 'Where have you been?', class: 'form-control' %>
+  </div>
+</div>
+<div class="row">
+  <div id="time-col" class='col-2 mb-2'>
+    <%#=image_tag 'clock.png', height: 30%> 
+    <%=form.text_field :time, size: 4, class: 'form-control' %>
+  </div>
+  <div id="all-day-col" class='col-2 pl-0 mb-2'>
+    <div class="form-check">
+      <%=form.check_box :all_day, class: 'form-check-input', onclick: 'allDay()' %>
+      <label class="form-check-label" for="all_day">All day</label>
     </div>
   </div>
-  <div class="row">
-    <div class='col-3'>
-      <%#=image_tag 'clock.png', height: 30%> 
-      <%=form.text_field :time, size: 4, class: 'form-control' %>
-    </div>
-    <div class='col'>
-      <%=image_tag 'calendar.png', height: 30, onclick: 'openCal()'%> 
-      <%=form.hidden_field :day, size: 8 %>
-      &nbsp;
-      <%=form.submit 'Save', class: 'btn btn-primary' %>
-    </div>
+  <div id="day-col" class='col-3 mb-2'>
+    <%=form.text_field :day, size: 12, class: 'form-control', onclick: 'openCal()' %>
+    <%# <%=image_tag 'calendar.png', height: 30, onclick: 'openCal()'%> 
   </div>
+  <div id="no-people-col" class='col-3 mb-2'>
+    <%=form.text_field :no_people, size: 4, placeholder: '# of people', class: 'form-control' %>
+  </div>
+  <div id="submit-col" class='col-2 mb-2'>
+    <%=form.submit 'Save', class: 'btn btn-primary', style: 'width: 100%' %>
+  </div>
+</div>
 <% end %>
 <script>
   var dp = new SimplePicker({disableTimeSection: false, compactMode: true});
 function openCal() {
   dp.open();
   dp.disableTimeSection();
+}
+function allDay(x) {
+  // console.log('time val: ' + $('#log_entry_time').val());
+  // console.log('disabled: ' + $('#log_entry_time').prop('disabled'));
+  // console.log('check val: ' + $('#log_entry_all_day').prop('checked'));
+  if($('#log_entry_all_day').prop('checked')) {
+    $('#log_entry_time').val('').prop('disabled', true);
+  } else {
+    var x = new Date;
+    x = x.toTimeString().substr(0,5);
+    $('#log_entry_time').val(x).prop('disabled', false);
+  }
 }
 dp.on('submit', function(d1, d2) {
   var ts = moment(d1);
@@ -58,13 +66,18 @@ dp.on('submit', function(d1, d2) {
 <hr />
 
 <%= form_with(model: @google, local: true, id: 'gupload') do |form| %>
-  <div class='row justify-content-center'>
+<div id="gmaps-data">
+<h4>Use Google Maps data</h4>
+  <!-- <div class='row justify&#45;content&#45;center'> -->
+  <div class='row'>
     <div class='col-auto'>
       <center>
-        <%# <%=image_tag 'dl.png', height: 120 %> <br />
-        <span style="font-family: 'Nunito Sans', sans-serif; font-size: 21px;">
-          Download your<br />location data<br />
-        </span>
+        <%# <%=image_tag 'dl.png', height: 120 %>
+        <!-- <span style="font&#45;family: 'Nunito Sans', sans&#45;serif; font&#45;size: 21px;"> -->
+        <h5>
+          Download from<br />Google Maps
+        </h5>
+        <!-- </span> -->
       </center>
       <div>
         <center>
@@ -76,11 +89,16 @@ dp.on('submit', function(d1, d2) {
           <%=link_to '5 days ago', tlurl(Date.today - 5) %> <br />
           <%=link_to '6 days ago', tlurl(Date.today - 6) %> <br />
           <%=link_to '7 days ago', tlurl(Date.today - 7) %> <br />
-          <br />
+        <!--   <br /> -->
         </center>
       </div>
     </div>
     <div class='col-auto'>
+      <center>
+        <h5>
+          Upload<br />location data
+        </h5>
+      </center>
       <%=form.drag_and_drop_file_field :uploads do%>
         <%# <%=image_tag 'upload.png', height: 120 %>
         Drag here or click to select
@@ -90,4 +108,21 @@ dp.on('submit', function(d1, d2) {
       </center>
     </div>
   </div>
+  <hr class="mb-4" />
+</div>
 <% end %>
+
+<h4>Log</h4>
+<div id="log-entries" class="mb-4">
+<%
+curdate= nil
+@entries.each do |e| %>
+<% if e.day != curdate
+  curdate = e.day%>
+   <h5><%=e.day.strftime("%A %d.%m.")%></h5>
+ <% end %>
+ <span id='log-<%=e.id%>'>
+   <%= render 'log_entries/row', object: e %>
+ </span>
+<% end %>
+</div>

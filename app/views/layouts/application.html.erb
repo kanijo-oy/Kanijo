@@ -14,37 +14,48 @@
 
   <body>
     <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
-      <a class="navbar-brand" href="#">Pisarasi</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
+      <div class="container">
+        <a class="navbar-brand" href="#">Pisarasi</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
 
-      <div class="collapse navbar-collapse" id="navbarsExampleDefault">
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item active">
-            <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/home/policy">Privacy policy</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/home/help">Help</a>
-          </li>
-        </ul>
-        <!--
-        <form class="form-inline my-2 my-lg-0">
-          <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-        </form>
-        -->
+        <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/home/policy">Privacy policy</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/home/help">About</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" id="dropdown-lang" data-toggle="dropdown" href="#">English</a>
+              <div class="dropdown-menu" aria-labelledby="dropdown-lang">
+                <a class="dropdown-item" href="#">English</a>
+                <a class="dropdown-item" href="#">Suomi</a>
+                <a class="dropdown-item" href="#">Svenska</a>
+              </div>
+<!-- <a class="nav&#45;link dropdown&#45;toggle" href="http://example.com" id="dropdown07" data&#45;toggle="dropdown" aria&#45;haspopup="true" aria&#45;expanded="true">Dropdown</a> -->
+            </li>
+          </ul>
+          <!--
+            <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form>
+          -->
+        </div>
       </div>
     </nav>
-    <div class='langbar'>
+    <!-- <div class='langbar'> -->
       <%# <%=image_tag 'uk.png', class: 'flag flag-active'%>
       <%# <%=image_tag 'fin.png', class: 'flag'%>
       <%# <%=image_tag 'swe.png', class: 'flag'%>
-      EN <a href="#">FI</a> <a href="#">SV</a>
-    </div>
+      <!-- EN <a href="#">FI</a> <a href="#">SV</a> -->
+    <!-- </div> -->
 
     <main role="main" class="container">
       <% if notice %>

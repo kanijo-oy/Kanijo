@@ -29,3 +29,11 @@
 /yarn-error.log
 yarn-debug.log*
 .yarn-integrity
+
+.swo
+.swp
+.*.swp
+.*.swo
+.*.un~
+.DS_Store
+
