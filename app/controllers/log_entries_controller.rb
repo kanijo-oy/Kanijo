@@ -29,7 +29,7 @@ class LogEntriesController < ApplicationController
     respond_to do |format|
       if @log_entry.save
         # format.html { redirect_to @log_entry, notice: 'Log entry was successfully created.' }
-        format.html { redirect_to root_path, notice: 'Log entry was successfully created.' }
+        format.html { redirect_to root_path, notice: t(:log_created) }
         format.json { render :show, status: :created, location: @log_entry }
       else
         format.html { render :new }

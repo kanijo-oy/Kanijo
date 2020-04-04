@@ -20,6 +20,7 @@ fi:
   draghere: Vedä tähän tai klikkaa valitaksesi
   send: Lähetä
   log: Loki
+  log_created: Merkintä tallennettu
   
   edituser: Muokkaa profiilia
   email: Sähköposti
