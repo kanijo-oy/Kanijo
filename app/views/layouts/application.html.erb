@@ -22,14 +22,17 @@
 
         <div class="collapse navbar-collapse" id="navbarsExampleDefault">
           <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-              <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+            <li class="nav-item <%= 'active' if current_page?(home_index_path) || current_page?('/') %>">
+              <%=link_to 'Home', home_index_path, class: 'nav-link' %>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/home/policy">Privacy policy</a>
+            <li class="nav-item <%= 'active' if current_page? home_policy_path %>">
+              <%=link_to 'Privacy policy', home_policy_path, class: 'nav-link' %>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/home/help">About</a>
+            <li class="nav-item <%= 'active' if current_page? home_help_path %>">
+              <%=link_to 'About', home_help_path, class: 'nav-link' %>
+            </li>
+            <li class="nav-item <%= 'active' if current_page? edit_user_registration_path %>">
+              <%=link_to 'Profile', edit_user_registration_path, class: 'nav-link' %>
             </li>
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" id="dropdown-lang" data-toggle="dropdown" href="#">English</a>
