@@ -23,23 +23,23 @@
         <div class="collapse navbar-collapse" id="navbarsExampleDefault">
           <ul class="navbar-nav mr-auto">
             <li class="nav-item <%= 'active' if current_page?(home_index_path) || current_page?('/') %>">
-              <%=link_to 'Home', home_index_path, class: 'nav-link' %>
+              <%=link_to t(:home), home_index_path, class: 'nav-link' %>
             </li>
             <li class="nav-item <%= 'active' if current_page? home_policy_path %>">
-              <%=link_to 'Privacy policy', home_policy_path, class: 'nav-link' %>
+              <%=link_to t(:privacy_policy), home_policy_path, class: 'nav-link' %>
             </li>
             <li class="nav-item <%= 'active' if current_page? home_help_path %>">
-              <%=link_to 'About', home_help_path, class: 'nav-link' %>
+              <%=link_to t(:about), home_help_path, class: 'nav-link' %>
             </li>
             <li class="nav-item <%= 'active' if current_page? edit_user_registration_path %>">
-              <%=link_to 'Profile', edit_user_registration_path, class: 'nav-link' %>
+              <%=link_to t(:profile), edit_user_registration_path, class: 'nav-link' %>
             </li>
             <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" id="dropdown-lang" data-toggle="dropdown" href="#">English</a>
+              <a class="nav-link dropdown-toggle" id="dropdown-lang" data-toggle="dropdown" href="#"><%=t :current_lang%></a>
               <div class="dropdown-menu" aria-labelledby="dropdown-lang">
-                <a class="dropdown-item" href="#">English</a>
-                <a class="dropdown-item" href="#">Suomi</a>
-                <a class="dropdown-item" href="#">Svenska</a>
+                <a class="dropdown-item" href="?locale=en">English</a>
+                <a class="dropdown-item" href="?locale=fi">Suomi</a>
+                <a class="dropdown-item" href="?locale=se">Svenska</a>
               </div>
 <!-- <a class="nav&#45;link dropdown&#45;toggle" href="http://example.com" id="dropdown07" data&#45;toggle="dropdown" aria&#45;haspopup="true" aria&#45;expanded="true">Dropdown</a> -->
             </li>

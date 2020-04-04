@@ -1,0 +1,39 @@
+fi:
+  home: Koti
+  privacy_policy: Käyttöehdot
+  about: Tietoja
+  profile: Käyttäjätiedot
+
+  current_lang: Suomi 
+  add_manual_entry: Lisää merkintä
+  description_placeholder: Missä olet käynyt?
+  all_day: Koko päivä
+  num_people: Kontaktimäärä
+  save: Tallenna
+  use_gmaps: Google Maps -tiedot
+  download_gmaps: Hae Google<br />Maps tiedot
+  daysago:
+    zero: Tänään
+    one: 1 päivä sitten
+    other: '%{count} päivää sitten'
+  upload_data: Lähetä tiedot
+  draghere: Vedä tähän tai klikkaa valitaksesi
+  send: Lähetä
+  log: Loki
+  
+  edituser: Muokkaa profiilia
+  email: Sähköposti
+  password: Salasana
+  password_confirmation: Salasana uudelleen
+  pass_min_length:
+    zero: Salasanaa ei tarvita
+    one: Vähintään yksi merkki
+    other: 'Vähintään %{count} merkkiä'
+  password_placeholder: (jätä tyhjäksi jos et halua vaihtaa)
+  current_password: Nykyinen salasana
+  phone: Puhelinnumero
+  home_municipality: Kotikunta
+  update: Tallenna
+  delete_account: Poista tunnus
+  delete_account_btn: Poista tunnus
+  confirm: Haluatko aivan varmasti?

@@ -1,8 +1,8 @@
-<h4 class="pt-4">Add manually</h4>
+<h4 class="pt-4"><%=t :add_manual_entry %></h4>
 <%= form_with(model: @log, local: true) do |form| %>
 <div class="row mb-2">
   <div class='col'>
-    <%=form.text_field :description, size: 50, placeholder: 'Where have you been?', class: 'form-control' %>
+    <%=form.text_field :description, size: 50, placeholder: t(:description_placeholder), class: 'form-control' %>
   </div>
 </div>
 <div class="row">
@@ -13,7 +13,7 @@
   <div id="all-day-col" class='col-2 pl-0 mb-2'>
     <div class="form-check">
       <%=form.check_box :all_day, class: 'form-check-input', onclick: 'allDay()' %>
-      <label class="form-check-label" for="all_day">All day</label>
+      <label class="form-check-label" for="all_day"><%=t :all_day%></label>
     </div>
   </div>
   <div id="day-col" class='col-3 mb-2'>
@@ -21,10 +21,10 @@
     <%# <%=image_tag 'calendar.png', height: 30, onclick: 'openCal()'%> 
   </div>
   <div id="no-people-col" class='col-3 mb-2'>
-    <%=form.text_field :no_people, size: 4, placeholder: '# of people', class: 'form-control' %>
+    <%=form.text_field :num_people, size: 4, placeholder: t(:num_people), class: 'form-control' %>
   </div>
   <div id="submit-col" class='col-2 mb-2'>
-    <%=form.submit 'Save', class: 'btn btn-primary', style: 'width: 100%' %>
+    <%=form.submit t(:save), class: 'btn btn-primary', style: 'width: 100%' %>
   </div>
 </div>
 <% end %>
@@ -55,7 +55,7 @@ dp.on('submit', function(d1, d2) {
 
 <%= form_with(model: @google, local: true, id: 'gupload') do |form| %>
 <div id="gmaps-data">
-<h4>Use Google Maps data</h4>
+  <h4><%=t :use_gmaps%></h4>
   <!-- <div class='row justify&#45;content&#45;center'> -->
   <div class='row'>
     <div class='col-auto'>
@@ -63,36 +63,30 @@ dp.on('submit', function(d1, d2) {
         <%# <%=image_tag 'dl.png', height: 120 %>
         <!-- <span style="font&#45;family: 'Nunito Sans', sans&#45;serif; font&#45;size: 21px;"> -->
         <h5>
-          Download from<br />Google Maps
+          <%=raw t :download_gmaps%>
         </h5>
         <!-- </span> -->
       </center>
       <div>
         <center>
-          <%=link_to 'Today', timelineurl(Date.today) %> <br />
-          <%=link_to '1 day ago', timelineurl(Date.today - 1) %> <br />
-          <%=link_to '2 days ago', timelineurl(Date.today - 2) %> <br />
-          <%=link_to '3 days ago', timelineurl(Date.today - 3) %> <br />
-          <%=link_to '4 days ago', timelineurl(Date.today - 4) %> <br />
-          <%=link_to '5 days ago', timelineurl(Date.today - 5) %> <br />
-          <%=link_to '6 days ago', timelineurl(Date.today - 6) %> <br />
-          <%=link_to '7 days ago', timelineurl(Date.today - 7) %> <br />
-        <!--   <br /> -->
+          <%(0..7).each do |d|%>
+            <%=link_to t(:daysago, count: d), timelineurl(Date.today - d) %> <br />
+          <% end %>
         </center>
       </div>
     </div>
     <div class='col-auto'>
       <center>
         <h5>
-          Upload<br />location data
+          <%=raw t :upload_data%>
         </h5>
       </center>
       <%=form.drag_and_drop_file_field :uploads do%>
         <%# <%=image_tag 'upload.png', height: 120 %>
-        Drag here or click to select
+        <%= t :draghere %>
       <% end %>
       <center>
-        <%=form.submit 'Send', class: 'btn btn-primary' %>
+        <%=form.submit t(:send), class: 'btn btn-primary' %>
       </center>
     </div>
   </div>
@@ -100,7 +94,7 @@ dp.on('submit', function(d1, d2) {
 </div>
 <% end %>
 
-<h4>Log</h4>
+<h4><%=t(:log)%></h4>
 <div id="log-entries" class="mb-4">
 <%
 curdate= nil

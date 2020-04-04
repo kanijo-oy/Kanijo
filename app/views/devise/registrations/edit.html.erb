@@ -1,10 +1,10 @@
-<h2>Edit <%= resource_name.to_s.humanize %></h2>
+<h2><%=t :edituser %></h2>
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
   <%= render "devise/shared/error_messages", resource: resource %>
 
   <div class="field form-group">
-    <%= f.label :email %>
+    <%= f.label :email, t(:email) %>
     <%= f.email_field :email, autofocus: true, autocomplete: "email", class: 'form-control' %>
   </div>
 
@@ -13,42 +13,40 @@
   <% end %>
 
   <div class="field form-group">
-    <%= f.label :password %>
-    <%= f.password_field :password, autocomplete: "new-password", class: 'form-control', placeholder: "(leave blank if you don't want to change)" %>
+    <%= f.label :password, t(:password) %>
+    <%= f.password_field :password, autocomplete: "new-password", class: 'form-control', placeholder: t(:password_placeholder) %>
     <% if @minimum_password_length %>
-      <em><%= @minimum_password_length %> characters minimum</em>
+      <em><%= t :pass_min_length, count: @minimum_password_length %></em>
     <% end %>
   </div>
 
   <div class="field form-group">
-    <%= f.label :password_confirmation %>
+    <%= f.label :password_confirmation, t(:password_confirmation) %>
     <%= f.password_field :password_confirmation, autocomplete: "new-password", class: 'form-control' %>
   </div>
 
   <div class="field form-group">
-    <%= f.label :current_password %>
+    <%= f.label :current_password, t(:current_password) %>
     <%= f.password_field :current_password, autocomplete: "current-password", class: 'form-control' %>
   </div>
 
   <div class="field form-group">
-    <%= f.label :phonenumber, 'Phone number' %>
+    <%= f.label :phonenumber, t(:phone) %>
     <%= f.text_field :phonenumber, autocomplete: "tel", class: 'form-control' %>
   </div>
 
   <div class="field form-group">
-    <%= f.label :home_municipality %>
+    <%= f.label :home_municipality, t(:home_municipality) %>
     <%= f.text_field :home_municipality, class: 'form-control' %>
   </div>
 
   <div class="actions">
-    <%= f.submit "Update", class: 'btn btn-primary' %>
+    <%= f.submit t(:update), class: 'btn btn-primary' %>
   </div>
 <% end %>
 
 <hr />
 
-<h3>Delete account</h3>
+<h3><%=t :delete_account %></h3>
 
-<p><%= button_to "Delete my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete, class: 'btn btn-danger' %></p>
-
-<%= link_to "Back", :back %>
+<p><%= button_to t(:delete_account_btn), registration_path(resource_name), data: { confirm: t(:confirm) }, method: :delete, class: 'btn btn-danger' %></p>
