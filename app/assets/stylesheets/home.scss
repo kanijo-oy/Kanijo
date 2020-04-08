@@ -25,20 +25,6 @@ a svg {
   color: black;
 }
 
-.help-blob {
-  display: none;
-  position: absolute;
-  left: 10px;
-  top: 80px;
-  width: 20%;
-  height: 30em;
-}
-@import 'bootstrap/scss/bootstrap';
-@include media-breakpoint-up(xl) {
-  .help-blob {
-    display: block;
-  }
-}
 
 .langbar {
   position: fixed !important;
@@ -103,3 +89,48 @@ a svg {
   display: none;
 }
 
+@media screen and (min-width: 701px) and (max-width: 3000px) {
+    #deskari {
+        // display: block;
+    }
+
+    #mobilescreen {
+        // display: none;
+    }
+}
+
+// TODO: might be better with @include media-breakpoint-down(xl) {}
+@media screen and (min-width: 0px) and (max-width: 700px) {
+    #gmaps-data {
+        display: none;
+    }
+
+    // use col-3
+    #time-col, #all-day-col {
+        flex: 0 0 25%;
+        max-width: 25%;
+    }
+
+    // use col-5
+        // flex: 0 0 41.6666666667%;
+        // max-width: 41.6666666667%;
+
+    // use col-6
+    #day-col, #no-people-col, #submit-col {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+
+    #deskari {
+        // display: none;
+    }
+
+    #mobilescreen {
+        // display: block;
+    }
+}
+
+
+.translation_missing {
+  border: 1px dashed red;
+}
