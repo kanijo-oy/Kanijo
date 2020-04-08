@@ -78,6 +78,11 @@ a svg {
   height: 30px !important;
 }
 
+// Prevent datepicker from being covered by the navbar.
+.simplepicker-wrapper {
+  top: 24px;
+}
+
 #asdndz-gloc_uploads {
   /* border: 5px #8fd6ff solid; */
   border: 5px #c7ebff dashed;
