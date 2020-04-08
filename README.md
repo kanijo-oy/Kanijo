@@ -16,3 +16,29 @@ whether you had crossed paths with infected persons.
 
 Project details page:
 https://app.hackjunction.com/projects/hack-the-crisis-finland/view/5e7511fa09429f0049bcd4ea
+
+## Build instructions
+
+You need to have:
+
+- Ruby version ~>2.5.5 to build the project
+- PostgreSQL >= 12
+
+Create rails credentials
+
+```bash
+EDITOR=vim rails credentials:edit
+```
+
+Add needed gems
+
+```bash
+sudo bundle install
+```
+
+Build and run the container
+
+```bash
+docker build . -t pisarasi
+docker run pisarasi
+```
