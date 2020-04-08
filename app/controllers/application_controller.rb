@@ -1,5 +1,7 @@
 class ApplicationController < ActionController::Base
 
+  before_action :authenticate_user!
+
   around_action :switch_locale
 
   def switch_locale(&action)

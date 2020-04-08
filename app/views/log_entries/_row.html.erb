@@ -1,4 +1,7 @@
-<%=link_to fas('trash'), log_entry_path(object), remote: true, method: 'delete' %>
-<%=link_to fas('edit'), edit_log_entry_path(object), remote: true %>
-<%=object.time%> <%=object.description%> <br />
+<%=link_to fas('trash'), log_entry_path(object), remote: true, method: 'delete', title: t(:delete), data: { confirm: t(:delete_confirm) } %>
+<%=link_to fas('edit'), edit_log_entry_path(object), remote: true, title: t(:edit) %>
+<%=object.time%> <%=object.description%> 
+<% if object.contacts && !object.contacts.empty? %>
+ (<%=object.contacts%>)
+<% end %><br />
 
