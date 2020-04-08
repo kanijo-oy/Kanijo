@@ -21,6 +21,9 @@ fi:
   send: Lähetä
   log: Loki
   log_created: Merkintä tallennettu
+  delete: Poista
+  delete_confirm: Haluatko varmasti poistaa tämän merkinnän?
+  edit: Muokkaa
   
   edituser: Muokkaa profiilia
   email: Sähköposti

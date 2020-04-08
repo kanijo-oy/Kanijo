@@ -21,6 +21,9 @@ en:
   send: Send
   log: Log
   log_created: Log entry saved succesfully
+  delete: Delete
+  delete_confirm: Do you really want to delete this entry?
+  edit: Edit
   
   edituser: Your profile
   email: Email
