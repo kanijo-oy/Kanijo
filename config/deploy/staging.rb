@@ -7,10 +7,10 @@
 # server "example.com", user: "deploy", roles: %w{app web}, other_property: :other_value
 # server "db.example.com", user: "deploy", roles: %w{db}
 
-server "qa.pisarasi.fi", roles: %w{app db web}, user: "app"
+server "test.pisarasi.fi", roles: %w{app db web}, user: "app"
 set :deploy_to, "/var/www/test.pisarasi.fi"
 set :rails_env, 'production'
-set :branch, 'profile'
+set :branch, 'dev'
 
 
 # role-based syntax
