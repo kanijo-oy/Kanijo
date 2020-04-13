@@ -43,6 +43,9 @@
               </div>
 <!-- <a class="nav&#45;link dropdown&#45;toggle" href="http://example.com" id="dropdown07" data&#45;toggle="dropdown" aria&#45;haspopup="true" aria&#45;expanded="true">Dropdown</a> -->
             </li>
+            <li class="nav-item">
+              <%=link_to t(:logout), destroy_user_session_path, method: :delete, class: 'nav-link' %>
+            </li>
           </ul>
           <!--
             <form class="form-inline my-2 my-lg-0">
