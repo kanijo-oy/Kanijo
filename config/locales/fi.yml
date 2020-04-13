@@ -27,6 +27,7 @@ fi:
   edit: Muokkaa
   
   edituser: Muokkaa profiilia
+  name: Nimi
   email: Sähköposti
   password: Salasana
   password_confirmation: Salasana uudelleen
