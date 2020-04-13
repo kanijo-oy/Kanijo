@@ -21,7 +21,8 @@
     <%# <%=image_tag 'calendar.png', height: 30, onclick: 'openCal()'%> 
   </div>
   <div id="no-people-col" class='col-3 mb-2'>
-    <%=form.text_field :contacts, size: 4, placeholder: t(:num_people), class: 'form-control' %>
+    <%#=form.text_field :contacts, size: 4, placeholder: t(:num_people), class: 'form-control' %>
+    <%=form.select :contacts, options_for_select([t(:num_people)] + %w(0 1 2 3 4 5 6-10 11-25 26-50 50+)), {}, class: 'form-control' %>
   </div>
   <div id="submit-col" class='col-2 mb-2'>
     <%=form.submit t(:save), class: 'btn btn-primary', style: 'width: 100%' %>

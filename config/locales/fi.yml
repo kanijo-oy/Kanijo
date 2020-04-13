@@ -3,6 +3,7 @@ fi:
   privacy_policy: Käyttöehdot
   about: Tietoja
   profile: Käyttäjätiedot
+  logout: Kirjaudu ulos
 
   current_lang: Kielivalinta
   add_manual_entry: Lisää merkintä

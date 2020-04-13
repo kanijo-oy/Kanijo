@@ -3,6 +3,7 @@ en:
   privacy_policy: Privacy policy
   about: About
   profile: Profile
+  logout: Log out
 
   current_lang: Language selection
   add_manual_entry: Add manually

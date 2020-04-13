@@ -42,7 +42,7 @@ class Users::RegistrationsController < Devise::RegistrationsController
   protected
 
   def update_resource(resource, params)
-    if params[:password] != ""
+    if params[:password] && params[:password] != ""
       resource.update_with_password(params)
     else
       params.delete(:current_password)
