@@ -10,13 +10,15 @@ class User < ApplicationRecord
   def self.from_omniauth(access_token)
     data = access_token.info
     user = User.where(email: data['email']).first
-    logger.debug data
 
     unless user
       user = User.create(email: data['email'],
-                         password: Devise.friendly_token[0, 20]
+                         password: Devise.friendly_token[0, 20],
+                         provider: :google
                         )
     end
+    user.provider = :google
+    user.save
     user
   end
 end

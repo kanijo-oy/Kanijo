@@ -3,6 +3,14 @@
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
   <%= render "devise/shared/error_messages", resource: resource %>
 
+<% if f.object.provider == 'google' %>
+  <div class="field form-group">
+    <%= f.label :email, t(:email) %>
+    <%= f.object.email %>
+  </div>
+
+<% else %>
+
   <div class="field form-group">
     <%= f.label :email, t(:email) %>
     <%= f.email_field :email, autofocus: true, autocomplete: "email", class: 'form-control' %>
@@ -11,6 +19,10 @@
   <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
     <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
   <% end %>
+
+<% end %>
+
+<% unless f.object.provider == 'google' %>
 
   <div class="field form-group">
     <%= f.label :password, t(:password) %>
@@ -29,6 +41,8 @@
     <%= f.label :current_password, t(:current_password) %>
     <%= f.password_field :current_password, autocomplete: "current-password", class: 'form-control' %>
   </div>
+
+<% end %>
 
   <div class="field form-group">
     <%= f.label :phonenumber, t(:phone) %>
