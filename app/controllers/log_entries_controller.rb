@@ -4,7 +4,7 @@ class LogEntriesController < ApplicationController
   # GET /log_entries
   # GET /log_entries.json
   def index
-    @log_entries = LogEntry.all(user: current_user)
+    @log_entries = LogEntry.for_user(current_user).all
   end
 
   # GET /log_entries/1
