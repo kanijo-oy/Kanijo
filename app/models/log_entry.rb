@@ -4,6 +4,8 @@ class LogEntry < ApplicationRecord
 
   belongs_to :user
 
+  scope :for_user, ->(user) { where(user: user) }
+
   def time
     return '' unless super && super.time
     super.time.strftime('%H:%M')
