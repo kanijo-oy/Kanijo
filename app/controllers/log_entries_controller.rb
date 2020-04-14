@@ -4,7 +4,7 @@ class LogEntriesController < ApplicationController
   # GET /log_entries
   # GET /log_entries.json
   def index
-    @log_entries = LogEntry.all
+    @log_entries = LogEntry.all(user: current_user)
   end
 
   # GET /log_entries/1
@@ -67,7 +67,7 @@ class LogEntriesController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_log_entry
-      @log_entry = LogEntry.find(params[:id])
+      @log_entry = LogEntry.for_user(current_user).find(params[:id])
     end
 
     # Only allow a list of trusted parameters through.
