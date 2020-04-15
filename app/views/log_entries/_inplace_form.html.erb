@@ -13,7 +13,7 @@
 
     <%= form.text_field :time, size: 5 %>
     <%= form.text_field :description, size: 20 %>
-    <%= form.text_field :contacts, size: 5 %>
+    <%= form.select :contacts, options_for_select(LogEntry.num_options, form.object.contacts), {}, class: '' %>
 
     <%= form.submit 'Save' %>
 <% end %>
