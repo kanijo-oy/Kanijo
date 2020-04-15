@@ -10,4 +10,8 @@ class LogEntry < ApplicationRecord
     return '' unless super && super.time
     super.time.strftime('%H:%M')
   end
+
+  def self.num_options
+    %w(0 1 2 3 4 5 6-10 11-25 26-50 50+)
+  end
 end
