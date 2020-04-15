@@ -4,8 +4,9 @@ class GlocsController < ApplicationController
 
     respond_to do |format|
       if @gloc.save
-        # format.html { redirect_to @log_entry, notice: 'Log entry was successfully created.' }
-        format.html { redirect_to root_path, notice: 'Log entry was successfully created.' }
+        notice = t(:import_ok)
+        notice = @gloc.errors.to_a.join(', ') unless @gloc.errors.empty?
+        format.html { redirect_to root_path, notice: notice }
         format.json { render :show, status: :created, location: @log_entry }
       else
         format.html { render :new }

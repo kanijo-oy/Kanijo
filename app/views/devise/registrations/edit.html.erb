@@ -68,4 +68,8 @@
 
 <h3><%=t :delete_account %></h3>
 
+<p>
+<%=t :delete_help%>
+</p>
+
 <p><%= button_to t(:delete_account_btn), registration_path(resource_name), data: { confirm: t(:confirm) }, method: :delete, class: 'btn btn-danger' %></p>

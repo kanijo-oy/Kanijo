@@ -43,3 +43,10 @@ fi:
   delete_account: Poista tunnus
   delete_account_btn: Poista tunnus
   confirm: Haluatko aivan varmasti?
+  delete_help:
+    Voit poistaa tunnuksesi klikkaamalla allaolevaa nappia. Tunnuksesi poistuu
+    heti tämän jälkeen eikä sitä voida enää palauttaa. Samalla poistetaan myös
+    kaikki sinun lokimerkinnät.
+
+  import_ok: Lokimerkinnät tuotu onnistuneesti
+  import_empty: Lähetys onnistui, mutta tiedostosta ei löytynyt lokimerkintöjä
