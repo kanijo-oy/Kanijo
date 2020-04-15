@@ -8,9 +8,15 @@ en:
   current_lang: Language selection
   add_manual_entry: Add manually
   description_placeholder: Where have you been?
+  description_title: Enter description for the log entry
+  time_title: Log entry time
   all_day: All day
+  all_day_title: Is entry all day
+  day_title: Select date
   num_people: '# of people'
+  contacts_title: Select how many contacts for this log entry
   save: Save
+  save_title: Save entry
   use_gmaps: Use Google Maps data
   download_gmaps: Download from<br />Google Maps
   daysago:

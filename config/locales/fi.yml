@@ -8,9 +8,15 @@ fi:
   current_lang: Kielivalinta
   add_manual_entry: Lisää merkintä
   description_placeholder: Missä olet käynyt?
+  description_title: Lokimerkinnän paikka tai selite
+  time_title: Lokimerkinnän ajankohta
+  all_day_title: Koko päivän merkintä?
   all_day: Koko päivä
+  day_title: Valitse päivämäärä
   num_people: Kontaktimäärä
+  contacts_title: Valitse kuinka monta kontaktia lokimerkintään liittyy
   save: Tallenna
+  save_title: Tallenna lokimerkintä
   use_gmaps: Google Maps -tiedot
   download_gmaps: Hae Google<br />Maps tiedot
   daysago:
