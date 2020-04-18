@@ -8,25 +8,25 @@ fi:
   current_lang: Kielivalinta
   add_manual_entry: Lisää merkintä
   description_placeholder: Missä olet käynyt?
-  description_title: Lokimerkinnän paikka tai selite
-  time_title: Lokimerkinnän ajankohta
+  description_title: Päiväkirjamerkinnän paikka tai selite
+  time_title: Päiväkirjamerkinnän ajankohta
   all_day_title: Koko päivän merkintä?
   all_day: Koko päivä
   day_title: Valitse päivämäärä
-  num_people: Kontaktimäärä
-  contacts_title: Valitse kuinka monta kontaktia lokimerkintään liittyy
-  save: Tallenna
-  save_title: Tallenna lokimerkintä
-  use_gmaps: Google Maps -tiedot
-  download_gmaps: Hae Google<br />Maps tiedot
+  num_people: Ihmisten määrä
+  contacts_title: Kuinka monta ihmistä oli kanssasi samassa paikassa?
+  save: Lisää
+  save_title: Lisää päiväkirjamerkintä
+  use_gmaps: Google Timeline-tiedot
+  download_gmaps: Hae Google<br />Timeline-tiedot
   daysago:
     zero: Tänään
     one: 1 päivä sitten
     other: '%{count} päivää sitten'
   upload_data: Lähetä tiedot
-  draghere: Vedä tähän tai klikkaa valitaksesi
+  draghere: Vedä tähän tai klikkaa valitaksesi tiedosto
   send: Lähetä
-  log: Loki
+  log: Päiväkirja
   log_created: Merkintä tallennettu
   delete: Poista
   delete_confirm: Haluatko varmasti poistaa tämän merkinnän?
@@ -50,9 +50,9 @@ fi:
   delete_account_btn: Poista tunnus
   confirm: Haluatko aivan varmasti?
   delete_help:
-    Voit poistaa tunnuksesi klikkaamalla allaolevaa nappia. Tunnuksesi poistuu
-    heti tämän jälkeen eikä sitä voida enää palauttaa. Samalla poistetaan myös
-    kaikki sinun lokimerkinnät.
+    Voit poistaa tunnuksesi klikkaamalla alla olevaa nappia. Tunnuksesi poistuu
+    heti tämän jälkeen, eikä sitä voida enää palauttaa. Samalla poistetaan myös
+    kaikki päiväkirjamerkintäsi.
 
-  import_ok: Lokimerkinnät tuotu onnistuneesti
-  import_empty: Lähetys onnistui, mutta tiedostosta ei löytynyt lokimerkintöjä
+  import_ok: Merkinnät tuotu onnistuneesti
+  import_empty: Lähetys onnistui, mutta tiedostosta ei löytynyt merkintöjä, joita voisimme käyttää.
