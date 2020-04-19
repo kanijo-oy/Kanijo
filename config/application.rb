@@ -19,6 +19,6 @@ module Kanijo
     config.time_zone = 'Helsinki'
     config.active_record.default_timezone = :local
 
-    config.i18n.available_locales = [:en, :fi, :se]
+    config.i18n.available_locales = [:en, :fi, :sv]
   end
 end

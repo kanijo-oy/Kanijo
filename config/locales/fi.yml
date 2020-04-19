@@ -1,7 +1,8 @@
 fi:
-  home: Koti
+  home: Päiväkirja
   privacy_policy: Käyttöehdot
   about: Tietoja
+  faq: UKK
   profile: Käyttäjätiedot
   logout: Kirjaudu ulos
 

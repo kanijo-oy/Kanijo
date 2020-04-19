@@ -1,4 +1,4 @@
-<h4 class="pt-4"><%=t :add_manual_entry %></h4>
+<h2 class="pt-4"><%=t :add_manual_entry %></h2>
 <%= form_with(model: @log, local: true) do |form| %>
 <div class="row mb-2">
   <div class='col'>
@@ -56,16 +56,16 @@ dp.on('submit', function(d1, d2) {
 
 <%= form_with(model: @google, local: true, id: 'gupload') do |form| %>
 <div id="gmaps-data">
-  <h4><%=t :use_gmaps%></h4>
+  <h2><%=t :use_gmaps%></h2>
   <!-- <div class='row justify&#45;content&#45;center'> -->
   <div class='row'>
     <div class='col-auto'>
       <center>
         <%# <%=image_tag 'dl.png', height: 120 %>
         <!-- <span style="font&#45;family: 'Nunito Sans', sans&#45;serif; font&#45;size: 21px;"> -->
-        <h5>
+        <h3>
           <%=raw t :download_gmaps%>
-        </h5>
+        </h3>
         <!-- </span> -->
       </center>
       <div>
@@ -78,9 +78,9 @@ dp.on('submit', function(d1, d2) {
     </div>
     <div class='col-auto'>
       <center>
-        <h5>
+        <h3>
           <%=raw t :upload_data%>
-        </h5>
+        </h3>
       </center>
       <%=form.drag_and_drop_file_field :uploads do%>
         <%# <%=image_tag 'upload.png', height: 120 %>
@@ -95,14 +95,14 @@ dp.on('submit', function(d1, d2) {
 </div>
 <% end %>
 
-<h4><%=t(:log)%></h4>
+<h2><%=t(:log)%></h2>
 <div id="log-entries" class="mb-4">
 <%
 curdate= nil
 @entries.each do |e| %>
 <% if e.day != curdate
   curdate = e.day%>
-   <h5><%=l e.day, format: "%A %d.%m."%></h5>
+   <h3><%=l e.day, format: "%A %d.%m."%></h3>
  <% end %>
  <span id='log-<%=e.id%>'>
    <%= render 'log_entries/row', object: e %>
