@@ -1,0 +1,15 @@
+<h2><%=t :tos_page %></h2>
+
+<p>
+<%=t :tos_required %>
+</p>
+
+<%= form_with(model: current_user, url: home_tos_path, local: true) do |form| %>
+
+  <div class="field form-group">
+    <%= form.check_box :accept_tos, class: 'form-check-input' %>
+    <%= form.label :accept_tos, raw(t(:accept_tos)), class: 'form-check-label' %>
+  </div>
+
+  <%= form.submit t(:save), class: 'btn btn-primary' %>
+<% end %>
