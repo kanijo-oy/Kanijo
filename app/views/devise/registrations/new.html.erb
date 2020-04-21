@@ -21,6 +21,11 @@
     <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
   </div>
 
+  <div class="field form-group">
+    <%= f.check_box :accept_tos, class: 'form-check-input' %>
+    <%= f.label :accept_tos, raw(t(:accept_tos)), class: 'form-check-label' %>
+  </div>
+
   <div class="actions">
     <%= f.submit "Sign up" %>
   </div>
