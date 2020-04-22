@@ -12,8 +12,8 @@ Users can use this diary as a prefilled "information form" when doing an intervi
 
 ## Plans for future
 
-**More data sources** - Further development would be to get GPS tracking data from other applications (e.g. fitness trackers or other cellphone location tracking apps) and parse visits from there. 
-**My places** - add your regularly visited locations, like home, work, grocery store and pharmacy into your account and quickly refine the import or add new entries.
+**More data sources** - Further development would be to get GPS tracking data from other applications (e.g. fitness trackers or other cellphone location tracking apps) and parse visits from there.⋅⋅
+**My places** - add your regularly visited locations, like home, work, grocery store and pharmacy into your account and quickly refine the import or add new entries.⋅⋅
 **Social circles** - add your family members, close colleagues and other people you meet with regularly as a circle member. You can add circle members to your places.
 
 With large enough user base this could also alert healthcare or users whether you had crossed paths with infected persons and direct users to take proper actions based on their location.
