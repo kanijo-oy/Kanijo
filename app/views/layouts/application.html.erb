@@ -6,6 +6,7 @@
     <%= csp_meta_tag %>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="icon" type="image/png" href="<%=asset_url 'icon-white-bg.png'%>">
 
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-163574617-2"></script>
     <script>
@@ -23,7 +24,7 @@
   </head>
 
   <body>
-    <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+    <nav class="navbar navbar-expand-md topnav fixed-top">
       <div class="container-fluid">
         <a class="navbar-brand" href="/">Työkalu tartuntaketjujen jäljittämiseksi</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
@@ -32,6 +33,9 @@
 
         <div class="collapse navbar-collapse" id="navbarsExampleDefault">
           <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+              <%=link_to t(:home), 'https://pisarasi.fi/', class: 'nav-link' %>
+            </li>
             <li class="nav-item">
               <%=link_to t(:about), 'https://pisarasi.fi/about/', class: 'nav-link' %>
             </li>
@@ -84,5 +88,31 @@
       <% end %>
        <%= yield %>
     </main>
+<!--
+    <footer class="footer">
+      <div class="container">
+        
+      </div>
+    </footer>
+-->
+
+<nav class="navbar fixed-bottom navbar-expand-sm navbar-dark bg-dark">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse justify-content-md-center" id="navbarCollapse">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <%=link_to t(:privacy_policy), 'https://pisarasi.fi/tietosuoja/', class: 'nav-link' %>
+      </li>
+      <li class="nav-item">
+        <%=link_to t(:tos), 'https://pisarasi.fi/pisarasi-palvelun-ehdot/', class: 'nav-link' %>
+      </li>
+      <li class="nav-item">
+        <%=link_to 'GitHub', 'https://github.com/kanijo-oy', class: 'nav-link' %>
+      </li>
+    </ul>
+  </div>
+</nav>
   </body>
 </html>
