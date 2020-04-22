@@ -1,4 +1,4 @@
-<h2>Sign up</h2>
+<h2><%=t(:signup)%></h2>
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= render "devise/shared/error_messages", resource: resource %>
@@ -18,13 +18,13 @@
     <%= f.password_field :password_confirmation, autocomplete: "new-password", class: 'form-control' %>
   </div>
 
-  <div class="field form-group">
+  <div class="field form-group" style="padding-left: 1.25rem">
     <%= f.check_box :accept_tos, class: 'form-check-input' %>
     <%= f.label :accept_tos, raw(t(:accept_tos)), class: 'form-check-label' %>
   </div>
 
   <div class="actions">
-    <%= f.submit "Sign up", class: 'btn btn-primary' %>
+    <%= f.submit t(:signup), class: 'btn btn-primary' %>
   </div>
 <% end %>
 

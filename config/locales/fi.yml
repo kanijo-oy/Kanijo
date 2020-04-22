@@ -64,3 +64,11 @@ fi:
   tos_not_accepted: Sinun täytyy hyväksyä käyttöehdot ja tietosuojaseloste
   save: Tallenna
 
+  account_already: Onko sinulla jo tunnus?
+  login: Kirjaudu sisään
+  no_account: Eikö sinulla ole vielä tunnusta?
+  signup: Rekisteröidy
+  forgot_pass: Unohditko salasanasi
+  forgot_instructions: Lähetä salasanan nollauspyyntö
+  signin: Kirjaudu sisään
+
