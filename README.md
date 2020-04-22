@@ -23,7 +23,10 @@ With large enough user base this could also alert healthcare or users whether yo
 
 ## Getting Started
 
-Coming soon..
+Our contribution documentation can be found [here](https://docs.google.com/document/d/1FlTWAp8TT5-QFwQmJOaTM4kgQT__Lhs0NOWKerdFSho/edit?usp=sharing)
+
+
+More coming soon..
 
 
 ### Build instructions
@@ -36,7 +39,8 @@ Coming soon..
 This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
 
 
-## PROJECT HISTORY
+## PROJECT HISTOR
+
 Original proof of concept was made during Hack the Crisis Finland -hackathlon in March 2020.
 
 Project details page:
