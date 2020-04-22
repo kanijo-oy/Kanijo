@@ -39,7 +39,7 @@ More coming soon..
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 
-## PROJECT HISTOR
+## PROJECT HISTORY
 
 Original proof of concept was made during Hack the Crisis Finland -hackathlon in March 2020.
 
