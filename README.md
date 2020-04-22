@@ -23,7 +23,7 @@ With large enough user base this could also alert healthcare or users whether yo
 
 ## Getting Started
 
-Our contribution documentation can be found [here](https://docs.google.com/document/d/1FlTWAp8TT5-QFwQmJOaTM4kgQT__Lhs0NOWKerdFSho/edit?usp=sharing)
+Our contribution documentation can be found [here](https://docs.google.com/document/d/1NKND-9Cl846VyjwbNusO_d0RCDaOodHaCOVDuB4GeG4/edit?usp=sharing)
 
 
 More coming soon..
