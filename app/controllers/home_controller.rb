@@ -10,4 +10,15 @@ class HomeController < ApplicationController
 
   def help
   end
+
+  skip_before_action :check_tos, only: [:tos]
+  def tos
+    params.require(:user).permit(:accept_tos) if params[:user]
+
+    if params.dig(:user, :accept_tos) == '1'
+      current_user.tos_accepted = Time.now
+      current_user.save
+      redirect_to root_path
+    end
+  end
 end

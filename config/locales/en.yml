@@ -16,8 +16,8 @@ en:
   day_title: Select date
   num_people: '# of people'
   contacts_title: Select how many people shared the space with you for this log entry
-  save: Add
-  save_title: Add entry
+  add: Add
+  add_title: Add entry
   use_gmaps: Use Google Timeline data
   download_gmaps: Download from<br />Google Timeline
   daysago:
@@ -58,3 +58,10 @@ en:
 
   import_ok: Log entries imported successfully
   import_empty: File was successfully uploaded, but did not contain data we could use
+
+  accept_tos: I accept the <a target='_blank' href="https://pisarasi.fi/pisarasi-palvelun-ehdot/?lang=en">Terms and conditions</a> and <a target='_blank' href="https://pisarasi.fi/tietosuoja/?lang=en">Privacy policy</a>
+  tos_page: Terms of service and Privacy policy
+  tos_required: You need to accept Terms of service and Privacy policy before you can proceed further to this service.
+  tos_not_accepted: You need to accept Terms of service and Privacy policy
+  save: Save
+

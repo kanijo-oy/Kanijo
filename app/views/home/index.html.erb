@@ -25,7 +25,7 @@
     <%=form.select :contacts, options_for_select([t(:num_people)] + LogEntry.num_options), {}, class: 'form-control', title: t(:contacts_title) %>
   </div>
   <div id="submit-col" class='col-2 mb-2'>
-    <%=form.submit t(:save), class: 'btn btn-primary', style: 'width: 100%', title: t(:save_title) %>
+    <%=form.submit t(:add), class: 'btn btn-primary', style: 'width: 100%', title: t(:add_title) %>
   </div>
 </div>
 <% end %>

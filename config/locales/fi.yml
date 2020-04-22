@@ -16,8 +16,8 @@ fi:
   day_title: Valitse päivämäärä
   num_people: Ihmisten määrä
   contacts_title: Kuinka monta ihmistä oli kanssasi samassa paikassa?
-  save: Lisää
-  save_title: Lisää päiväkirjamerkintä
+  add: Lisää
+  add_title: Lisää päiväkirjamerkintä
   use_gmaps: Google Timeline-tiedot
   download_gmaps: Hae Google<br />Timeline-tiedot
   daysago:
@@ -57,3 +57,10 @@ fi:
 
   import_ok: Merkinnät tuotu onnistuneesti
   import_empty: Lähetys onnistui, mutta tiedostosta ei löytynyt merkintöjä, joita voisimme käyttää.
+
+  accept_tos: Hyväksyn palveluun liittyvät <a target='_blank' href="https://pisarasi.fi/pisarasi-palvelun-ehdot/?lang=fi">käyttöehdot</a> sekä <a target='_blank' href="https://pisarasi.fi/tietosuoja/?lang=fi">tietosuojaselosteen</a>
+  tos_page: Käyttöehdot ja tietosuoja
+  tos_required: Sinun täytyy hyväksyä vielä käyttöehdot ja tietosuojaseloste ennen kuin voit jatkaa palvelun käyttöä
+  tos_not_accepted: Sinun täytyy hyväksyä käyttöehdot ja tietosuojaseloste
+  save: Tallenna
+
