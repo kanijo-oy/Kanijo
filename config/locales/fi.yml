@@ -1,6 +1,8 @@
 fi:
   home: Päiväkirja
-  privacy_policy: Käyttöehdot
+  privacy_policy: Tietosuoja
+  tos: Käytötehdot
+  home: Etusivu
   about: Tietoja
   faq: UKK
   profile: Käyttäjätiedot
