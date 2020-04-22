@@ -2,10 +2,30 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
 
-main.container {
-  margin-top: 60px;
-  max-width: 40em;
+@import 'bootstrap/scss/bootstrap';
 
+body {
+  font-family: 'Poppins', sans-serif;
+  font-size: 12pt;
+  color: black;
+}
+
+nav {
+  font-family: 'Arial', 'Helvetica', sans-serif;
+}
+
+h2 {
+  font-size: 16pt;
+  font-weight: bold;
+}
+
+h3 {
+  font-size: 15pt;
+}
+
+main.container {
+  margin-top: 90px;
+  max-width: 40em;
 }
 
 label.asdndzone {
@@ -15,25 +35,7 @@ label.asdndzone {
   border: none;
 }
 
-h2 {
-  font-size: 140%;
-  font-weight: bold;
-  padding-top: 0.5em;
-}
-
-a svg {
-  color: black;
-}
-
-
-.langbar {
-  position: fixed !important;
-  right: 16px !important;
-  top: 16px !important;
-  z-index: 9000;
-  color: #fff;
-}
-
+/*
 .navbar-dark .navbar-nav .nav-link {
   color: rgba(255, 255, 255, 0.75);
 }
@@ -53,30 +55,47 @@ a svg {
 .langbar a:hover {
   color: rgba(255,255,255,0.75);
 }
-
-.flag {
-  display:block !important;
-  height: 40px !important;
-  padding-left: 10px !important;
-  margin-bottom: 10px !important;
-}
-.flag-active {
-  padding-left: 0px !important;
-  height: 50px !important;
-}
+*/
 
 .navbar {
-  background-color: #369 !important;
+  background-color: #00aaee !important;
+}
+.navbar a {
+  color: black !important;
+}
+.navbar-nav .active a {
+  color: white !important;
 }
 
 .navbar-brand {
-  background-image: asset-url("logo-white-95x.png") !important;
-  background-position-y: 50% !important;
+  background-image: asset-url("whitelogo_trans_rbg-120x.png") !important;
+  background-position-y: 00% !important;
   background-repeat: no-repeat !important;
-  font-size: 0 !important;
-  width: 95px !important;
-  height: 30px !important;
+  font-size: 12pt !important;
+  margin-top: 5px; 
+  padding-top: 30px;
+  padding-right: 5em;
 }
+
+@include media-breakpoint-up(sm) {
+  .colbox-r {
+    flex-direction: column !important;
+    align-items: flex-end !important;
+    padding: 0px;
+    line-height: 0.5;
+  }
+  .colbox-r .colrow {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .colbox-r .colrow .navbar-nav {
+    margin-left: auto;
+  }
+  .colbox-r .dropdown-menu {
+    line-height: 1.5;
+  }
+}
+
 
 // Prevent datepicker from being covered by the navbar.
 .simplepicker-wrapper {
@@ -145,6 +164,10 @@ a svg {
     #mobilescreen {
         // display: block;
     }
+}
+
+#log-entries a {
+  color: black;
 }
 
 

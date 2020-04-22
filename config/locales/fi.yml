@@ -1,7 +1,8 @@
 fi:
-  home: Koti
+  home: Päiväkirja
   privacy_policy: Käyttöehdot
   about: Tietoja
+  faq: UKK
   profile: Käyttäjätiedot
   logout: Kirjaudu ulos
 
@@ -62,4 +63,12 @@ fi:
   tos_required: Sinun täytyy hyväksyä vielä käyttöehdot ja tietosuojaseloste ennen kuin voit jatkaa palvelun käyttöä
   tos_not_accepted: Sinun täytyy hyväksyä käyttöehdot ja tietosuojaseloste
   save: Tallenna
+
+  account_already: Onko sinulla jo tunnus?
+  login: Kirjaudu sisään
+  no_account: Eikö sinulla ole vielä tunnusta?
+  signup: Rekisteröidy
+  forgot_pass: Unohditko salasanasi
+  forgot_instructions: Lähetä salasanan nollauspyyntö
+  signin: Kirjaudu sisään
 
