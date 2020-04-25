@@ -14,7 +14,7 @@ class Gloc < ApplicationRecord
         doc = Crack::XML.parse(dd)
         pms = doc.dig('kml', 'Document', 'Placemark')
         unless pms
-          errors.add(:base, I18n.t(:import_empty))
+          # errors.add(:base, I18n.t(:import_empty))
           next
         end
         pms.each do |place|

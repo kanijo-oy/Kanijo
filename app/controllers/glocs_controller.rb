@@ -5,7 +5,7 @@ class GlocsController < ApplicationController
     respond_to do |format|
       if @gloc.save
         notice = t(:import_ok)
-        notice = @gloc.errors.to_a.join(', ') unless @gloc.errors.empty?
+        notice = @gloc.errors.to_a.join("\n") unless @gloc.errors.empty?
         format.html { redirect_to root_path, notice: notice }
         format.json { render :show, status: :created, location: @log_entry }
       else
