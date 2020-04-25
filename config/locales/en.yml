@@ -65,6 +65,7 @@ en:
   tos_page: Terms of service and Privacy policy
   tos_required: You need to accept Terms of service and Privacy policy before you can proceed further to this service.
   tos_not_accepted: You need to accept Terms of service and Privacy policy
+  marketing_mails: I want to receive announcements from Pisarasi-service, e.g. information about new features. Note that we can still send you emails about policy changes even if you decline from announcements.
   save: Save
 
   account_already: Already have an account?
