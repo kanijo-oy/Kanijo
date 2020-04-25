@@ -86,13 +86,17 @@ label.asdndzone {
 }
 
 .navbar-brand {
+  font-family: 'Poppins', sans-serif;
   background-image: asset-url("whitelogo_trans_rbg-120x.png") !important;
   background-position-y: 00% !important;
   background-repeat: no-repeat !important;
-  font-size: 12pt !important;
+  font-size: 11pt !important;
   margin-top: 5px; 
   padding-top: 30px;
   padding-right: 5em;
+}
+.nav-item {
+  padding-right: 0.6rem;
 }
 
 @include media-breakpoint-up(sm) {
@@ -143,16 +147,6 @@ label.asdndzone {
   display: none;
 }
 
-@media screen and (min-width: 701px) and (max-width: 3000px) {
-    #deskari {
-        // display: block;
-    }
-
-    #mobilescreen {
-        // display: none;
-    }
-}
-
 // TODO: might be better with @include media-breakpoint-down(xl) {}
 @media screen and (min-width: 0px) and (max-width: 700px) {
     #gmaps-data {
@@ -187,6 +181,13 @@ label.asdndzone {
 #log-entries a {
   color: black;
 }
+
+@include media-breakpoint-up(xl) {
+  .container {
+    max-width: 1170px;
+  }
+}
+
 
 .translation_missing {
   border: 1px dashed red;
