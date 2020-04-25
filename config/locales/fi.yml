@@ -65,6 +65,7 @@ fi:
   tos_page: Käyttöehdot ja tietosuoja
   tos_required: Sinun täytyy hyväksyä vielä käyttöehdot ja tietosuojaseloste ennen kuin voit jatkaa palvelun käyttöä
   tos_not_accepted: Sinun täytyy hyväksyä käyttöehdot ja tietosuojaseloste
+  marketing_mails: Haluan vastaanottaa Pisarasi-palveluun liittyviä tiedotuksia esimerkikis uusista ominaisuuksi. Voimme lähettää sinulle sopimusmuutoksia koskevia tiedonantoja sähköpostitse valinnasta huolimatta.
   save: Tallenna
 
   account_already: Onko sinulla jo tunnus?

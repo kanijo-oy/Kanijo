@@ -59,6 +59,11 @@
     <%= f.text_field :home_municipality, class: 'form-control' %>
   </div>
 
+  <div class="field form-group" style="padding-left: 1.25rem">
+    <%= f.check_box :marketing_mails, class: 'form-check-input' %>
+    <%= f.label :marketing_mails, t(:marketing_mails), class: 'form-check-label' %>
+  </div>
+
   <div class="actions">
     <%= f.submit t(:update), class: 'btn btn-primary' %>
   </div>
