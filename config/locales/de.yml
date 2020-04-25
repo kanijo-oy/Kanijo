@@ -1,0 +1,76 @@
+de:
+  privacy_policy: Datenschutz
+  tos: Nutzungsbedingungen (AGB)
+  home: Home
+  diary: Ihre Aufzeichnungen
+  about: Über
+  faq: Hilfe/FAQ
+  profile: Mein Profil
+  logout: Abmelden
+  current_lang: Sprachauswahl
+
+  add_manual_entry: Eintrag manuell hinzufügen
+  description_placeholder: Wo sind Sie gewesen?
+  description_title: Geben Sie hier Ihren Text ein
+  time_title: Uhrzeit eingeben
+  all_day: Ganztägig
+  all_day_title: Ganztägiges Ereignis?
+  day_title: Datum auswählen
+  num_people: 'Anzahl Kontaktpersonen'
+  contacts_title: Wählen Sie aus, wie viele Personen dabei waren
+  add: Eintragen
+  add_title: Eintrag hinzufügen
+  use_gmaps: Google Maps-Zeitachsendaten verwenden
+  download_gmaps: Herunterladen aus<br />Google Timeline
+  daysago:
+    zero: Heute
+    one: Gestern
+    other: 'Vor %{count} Tagen'
+  upload_data: Standortdaten<br />hochladen
+  draghere: Hierher ziehen or klicken, um auszuwählen
+  send: Senden
+  log: Ihre Aufzeichnungen
+  log_created: Eintrag erfolgreich gespeichert
+  delete: Löschen
+  delete_confirm: Möchten Sie diesen Eintrag wirklich löschen?
+  edit: Bearbeiten
+  
+  edituser: Profildaten
+  name: Name
+  email: E-Mail
+  password: Passwort
+  password_confirmation: Passwort bestätigen
+  pass_min_length:
+    zero: Kein Passwort benötigt
+    one: Mindestens 1 Zeichen benötigt
+    other: '%{count} Zeichen benötigt'
+  password_placeholder: (Feld leer lassen, wenn Sie Ihr Passwort nicht ändern möchten)
+  current_password: Aktuelles Passwort
+  phone: Telefonnummer
+  home_municipality: Wohnort
+  update: Aktualisieren
+  delete_account: Profil löschen
+  delete_account_btn: Mein Profil löschen
+  confirm: Are you sure?
+  delete_help:
+    Sie können Ihr Profil löschen, indem Sie auf den untenstehenden Button klicken. 
+    ACHTUNG! Die Löschung erfolgt sofort und dauerhaft und kann nicht rückgängig gemacht werden!
+    Wenn Ihr Profil gelöscht wird, werden alle Ihre Einträge ebenfalls sofort gelöscht.
+
+
+  import_ok: Einträge wurden erfolgreich importiert
+  import_empty: Datei wurde erfolgreich hochgeladen, enthält aber keine verwendbaren Daten
+
+  accept_tos: Ich bin mit den <a target='_blank' href="https://pisarasi.fi/pisarasi-palvelun-ehdot/?lang=de">Nutzungsbedingungen</a> und der <a target='_blank' href="https://pisarasi.fi/tietosuoja/?lang=de">Datenschutzerklärung</a> einverstanden.
+  tos_page: Nutzungsbedingungen und Datenschutzerklärung
+  tos_required: Die Zustimmung zu den Nutzungsbedingungen und zur Datenschutzerklärung ist erforderlich, um diesen Dienst zu nutzen.
+  tos_not_accepted: Die Zustimmung zu den Nutzungsbedingungen und zur Datenschutzerklärung ist erforderlich.
+  save: Speichern
+
+  account_already: Bereits registriert?
+  login: Hier anmelden
+  no_account: Noch nicht registriert?
+  signup: Registrieren
+  forgot_pass: Passwort vergessen?
+  forgot_instructions: E-Mail zum Zurücksetzen des Passworts anfordern
+  signin: Anmelden
