@@ -11,9 +11,13 @@
     </div>
   <% end %>
 
-    <%= form.text_field :time, size: 5 %>
-    <%= form.text_field :description, size: 20 %>
-    <%= form.select :contacts, options_for_select(LogEntry.num_options, form.object.contacts), {}, class: '' %>
+    <%= form.text_field :time, size: 5, title: 'Time' %>
+    <%= form.text_field :duration, size: 5, title: 'Duration' %>
+    <%= form.text_field :description, size: 20, title: 'Description' %>
+    <%= form.text_field :placename, size: 20, title: 'Place' %>
+    <%= form.text_field :address, size: 20, title: 'Address' %>
+    <%= form.select :contacts, options_for_select(LogEntry.num_options, form.object.contacts), {}, class: '', title: 'Number of contacts' %>
+    <%= form.text_field :persons, size: 20, title: 'Names of contacts' %>
 
     <%= form.submit 'Save' %>
 <% end %>

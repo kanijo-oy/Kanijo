@@ -5,7 +5,19 @@
     <%=form.text_field :description, size: 50, placeholder: t(:description_placeholder), class: 'form-control', title: t(:description_title) %>
   </div>
 </div>
+<div class="row mb-2">
+  <div class='col'>
+    <%=form.text_field :placename, placeholder: 'Name of the place', class: 'form-control' %>
+  </div>
+  <div class='col'>
+    <%=form.text_field :address, placeholder: 'Address', class: 'form-control' %>
+  </div>
+</div>
 <div class="row">
+  <div id="day-col" class='col-3 mb-2'>
+    <%=form.text_field :day, size: 12, class: 'form-control', onclick: 'openCal()', title: t(:day_title) %>
+    <%# <%=image_tag 'calendar.png', height: 30, onclick: 'openCal()'%> 
+  </div>
   <div id="time-col" class='col-2 mb-2'>
     <%#=image_tag 'clock.png', height: 30%> 
     <%=form.text_field :time, size: 4, class: 'form-control', title: t(:time_title) %>
@@ -16,15 +28,19 @@
       <label class="form-check-label" for="all_day"><%=t :all_day%></label>
     </div>
   </div>
-  <div id="day-col" class='col-3 mb-2'>
-    <%=form.text_field :day, size: 12, class: 'form-control', onclick: 'openCal()', title: t(:day_title) %>
-    <%# <%=image_tag 'calendar.png', height: 30, onclick: 'openCal()'%> 
+  <div class='col-3 mb-2'>
+    <%=form.text_field :duration, size: 4, class: 'form-control', placeholder: 'Duration', title: 'How long did you spend here' %>
   </div>
-  <div id="no-people-col" class='col-3 mb-2'>
+</div>
+<div class="row">
+  <div id="no-people-col" class='col-4 mb-2'>
     <%#=form.text_field :contacts, size: 4, placeholder: t(:num_people), class: 'form-control' %>
     <%=form.select :contacts, options_for_select([t(:num_people)] + LogEntry.num_options), {}, class: 'form-control', title: t(:contacts_title) %>
   </div>
-  <div id="submit-col" class='col-2 mb-2'>
+  <div class='col-5 mb-2'>
+    <%=form.text_field :persons, size: 4, class: 'form-control', placeholder: 'Names of people', title: 'Who where you in contact with?' %>
+  </div>
+  <div id="submit-col" class='col-3 mb-2'>
     <%=form.submit t(:add), class: 'btn btn-primary', style: 'width: 100%', title: t(:add_title) %>
   </div>
 </div>

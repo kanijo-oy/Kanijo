@@ -81,6 +81,6 @@ class LogEntriesController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def log_entry_params
-      params.require(:log_entry).permit(:day, :time, :description, :contacts, uploads: [])
+      params.require(:log_entry).permit(:day, :time, :description, :contacts, :duration, :placename, :address, :persons, uploads: [])
     end
 end
