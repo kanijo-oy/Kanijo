@@ -58,6 +58,16 @@ fi:
     heti tämän jälkeen, eikä sitä voida enää palauttaa. Samalla poistetaan myös
     kaikki päiväkirjamerkintäsi.
 
+  add_place_title: Lisää uusi paikka
+  placename: Paikannimi
+  chooseicon: Valitse ikoni
+  address: Osoite
+  address1: Katuosoite
+  postalcode: Postinumero
+  city: Kaupunki
+  add_place: Lisää paikka
+  people_num: Samassa paikassa muita henkilöitä
+
   import_ok: Merkinnät tuotu onnistuneesti
   import_empty: Lähetys onnistui, mutta tiedostosta ei löytynyt merkintöjä, joita voisimme käyttää.
 

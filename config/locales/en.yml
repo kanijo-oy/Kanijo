@@ -57,6 +57,16 @@ en:
     deletion is immediate and permanent, and cannot be undone. When your account
     is removed we also delete all your diary entries in the same time.
 
+  add_place_title: Add a new place
+  placename: Place name
+  chooseicon: Choose an icon
+  address: Address
+  address1: Street address
+  postalcode: Postal code
+  city: City
+  add_place: Add place
+  people_num: People I usually am with
+
 
   import_ok: Log entries imported successfully
   import_empty: File was successfully uploaded, but did not contain data we could use

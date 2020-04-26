@@ -1,3 +1,24 @@
+<h2>Places</h2>
+<%resource.places.each do |p| %>
+  <h4><%=p.name%> <%=fas(p.icon)%> <%=link_to fas('edit'), edit_place_path(p)%>
+  <%=link_to fas('trash'), place_path(p), method: 'delete', title: t(:delete), data: { confirm: t(:delete_confirm) } %>
+  </h4>
+  <p>
+  <%=p.address1%><br />
+  <%=p.postalcode%> <%=p.city%><br />
+  </p>
+  <p>
+  I share space usually with <%=p.num_people%> people.
+  </p>
+  <hr />
+<% end %>
+
+<h3><%=t :add_place_title %></h3>
+<%= form_for(@place) do |f| %>
+  <%= render 'places/form', place: @place %>
+<% end %>
+
+<hr />
 <h2><%=t :edituser %></h2>
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
