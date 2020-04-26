@@ -67,6 +67,7 @@ fi:
   city: Kaupunki
   add_place: Lisää paikka
   people_num: Samassa paikassa muita henkilöitä
+  person_names: Tässä paikassa yleensä lähikontaktissa olevien henkilöiden nimet
 
   import_ok: Merkinnät tuotu onnistuneesti
   import_empty: Lähetys onnistui, mutta tiedostosta ei löytynyt merkintöjä, joita voisimme käyttää.

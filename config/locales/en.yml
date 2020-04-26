@@ -66,6 +66,7 @@ en:
   city: City
   add_place: Add place
   people_num: People I usually am with
+  person_names: Names close contacts typically in this place
 
 
   import_ok: Log entries imported successfully

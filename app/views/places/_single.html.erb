@@ -1,0 +1,13 @@
+<h4><%=h place.name%> <%=fas(place.icon)%> <%=link_to fas('edit'), edit_place_path(place)%>
+<%=link_to fas('trash'), place_path(place), method: 'delete', title: t(:delete), data: { confirm: t(:delete_confirm) } %>
+</h4>
+<p>
+<%=h place.address1%><br />
+<%=h place.postalcode%> <%=place.city%><br />
+</p>
+<p>
+I share space usually with <%=h place.num_people%> people.
+<% if place.persons -%>
+  Close contacts: <%=h place.persons%>
+<% end %>
+</p>
