@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
-  resources :log_entries
+  resources :log_entries do
+    collection do
+      get :print
+    end
+  end
   resources :glocs
   resources :places
 

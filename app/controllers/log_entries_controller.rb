@@ -7,6 +7,15 @@ class LogEntriesController < ApplicationController
     @log_entries = LogEntry.for_user(current_user).all
   end
 
+  def print
+    @log_entries = LogEntry.for_user(current_user).all
+    respond_to do |format|
+      format.pdf do
+        headers["Content-Disposition"] = "attachment; filename=\"pisarasi-export.pdf\""
+      end
+    end
+  end
+
   # GET /log_entries/1
   # GET /log_entries/1.json
   def show
