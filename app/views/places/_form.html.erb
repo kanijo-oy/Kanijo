@@ -16,7 +16,8 @@
   </div>
   <div class="field form-group">
     <%= f.label :icon, t(:chooseicon) %>
-    <%= f.text_field :icon, class: 'form-control' %>
+    <%#= f.text_field :icon, class: 'form-control' %>
+    <%= f.select :icon, options_for_select(Place.iconlist, place.icon), {}, class: 'form-control' %>
   </div>
 
   <%=t(:address)%>
@@ -32,6 +33,10 @@
   <div class="field form-group form-inline">
     <%= f.label :num_people, t(:people_num)%>&nbsp;
     <%= f.number_field :num_people, min: 0, max: 100, class: 'form-control' %>
+  </div>
+  <div class="field form-group">
+    <%= f.label :persons, t(:person_names) %>
+    <%= f.text_field :persons, class: 'form-control' %>
   </div>
 
   <div class="actions">
