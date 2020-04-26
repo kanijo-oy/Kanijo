@@ -8,8 +8,8 @@ prawn_document do |pdf|
   pdf.font 'Helvetica', style: :normal
   pdf.text 'This is export of things'
 
-  pdf.text 'Report generated for ' + current_user.name
-  pdf.text 'Home municipality ' + current_user.home_municipality
+  pdf.text 'Report generated for ' + current_user.name if current_user.name
+  pdf.text 'Home municipality ' + current_user.home_municipality if current_user.home_municipality
 
   pdf.move_down 10
   pdf.font_size 12
