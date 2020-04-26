@@ -10,6 +10,8 @@ class User < ApplicationRecord
   attribute :accept_tos, :string
   validate :check_tos, on: :create
 
+  has_many :places
+
   def check_tos
     if accept_tos == '1'
       self.tos_accepted = Time.now

@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
   resources :log_entries
   resources :glocs
+  resources :places
+
   get 'home/index'
   get 'home/policy'
   get 'home/help'

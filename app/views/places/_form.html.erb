@@ -1,0 +1,40 @@
+<%= form_with(model: place, local: true) do |f| %>
+  <% if place.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(place.errors.count, "error") %> prohibited this place from being saved:</h2>
+
+      <ul>
+        <% place.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <div class="field form-group">
+    <%= f.label :name, t(:placename) %>
+    <%= f.text_field :name, class: 'form-control' %>
+  </div>
+  <div class="field form-group">
+    <%= f.label :icon, t(:chooseicon) %>
+    <%= f.text_field :icon, class: 'form-control' %>
+  </div>
+
+  <%=t(:address)%>
+  <div class="field form-group">
+    <%= f.text_field :address1, autocomplete: 'street-address', class: 'form-control', placeholder: t(:address1) %>
+  </div>
+  <div class="field form-group">
+    <%= f.text_field :postalcode, autocomplete: 'postal-code', class: 'form-control', placeholder: t(:postalcode) %>
+  </div>
+  <div class="field form-group">
+    <%= f.text_field :city, autocomplete: 'address-level2', class: 'form-control', placeholder: t(:city) %>
+  </div>
+  <div class="field form-group form-inline">
+    <%= f.label :num_people, t(:people_num)%>&nbsp;
+    <%= f.number_field :num_people, min: 0, max: 100, class: 'form-control' %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit t(:add_place), class: 'btn btn-primary' %>
+  </div>
+<% end %>

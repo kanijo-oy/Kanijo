@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_04_25_193835) do
+ActiveRecord::Schema.define(version: 2020_04_26_102320) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -52,6 +52,19 @@ ActiveRecord::Schema.define(version: 2020_04_25_193835) do
     t.index ["user_id"], name: "index_log_entries_on_user_id"
   end
 
+  create_table "places", force: :cascade do |t|
+    t.bigint "user_id", null: false
+    t.string "name"
+    t.string "icon"
+    t.string "address1"
+    t.string "postalcode"
+    t.string "city"
+    t.integer "num_people"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["user_id"], name: "index_places_on_user_id"
+  end
+
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
@@ -73,4 +86,5 @@ ActiveRecord::Schema.define(version: 2020_04_25_193835) do
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "log_entries", "users"
+  add_foreign_key "places", "users"
 end
