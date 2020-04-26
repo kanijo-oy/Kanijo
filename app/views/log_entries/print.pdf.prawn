@@ -36,7 +36,7 @@ prawn_document do |pdf|
     entry += ' (' + e.contacts + ' people present)' if e.contacts
     pdf.text entry
 =end
-    tbl << [e.day.strftime('%Y-%m-%d'), e.time, e.duration, e.placename, e.address, e.contacts, e.persons]
+    tbl << [e.day.strftime('%Y-%m-%d'), e.time, e.durationtext, e.description, e.address, e.contacts, e.persons]
 
   end
   pdf.table tbl

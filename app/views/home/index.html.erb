@@ -4,15 +4,17 @@
   <div class='col'>
     <%=form.text_field :description, size: 50, placeholder: t(:description_placeholder), class: 'form-control', title: t(:description_title) %>
   </div>
-</div>
-<div class="row mb-2">
-  <div class='col'>
-    <%=form.text_field :placename, placeholder: 'Name of the place', class: 'form-control' %>
-  </div>
   <div class='col'>
     <%=form.text_field :address, placeholder: 'Address', class: 'form-control' %>
   </div>
 </div>
+  <!--
+<div class="row mb-2">
+  <div class='col'>
+    <%#=form.text_field :placename, placeholder: 'Name of the place', class: 'form-control' %>
+  </div>
+</div>
+  -->
 <div class="row">
   <div id="day-col" class='col-3 mb-2'>
     <%=form.text_field :day, size: 12, class: 'form-control', onclick: 'openCal()', title: t(:day_title) %>
@@ -29,7 +31,8 @@
     </div>
   </div>
   <div class='col-3 mb-2'>
-    <%=form.text_field :duration, size: 4, class: 'form-control', placeholder: 'Duration', title: 'How long did you spend here' %>
+    <%#=form.text_field :duration, size: 4, class: 'form-control', placeholder: 'Duration', title: 'How long did you spend here' %>
+    <%=form.select :duration, options_for_select([['<15min', 1],['>15min', 2]], form.object.duration), {}, class: 'form-control', title: 'How long did you spend here' %>
   </div>
 </div>
 <div class="row">
