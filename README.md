@@ -24,11 +24,21 @@ You need to have:
 - Ruby version ~>2.5.5 to build the project
 - PostgreSQL >= 12
 
+Testing
+
+- Puma 
+
 Create rails credentials
 
 ```bash
 EDITOR=vim rails credentials:edit
 ```
+
+When building the docker image for the first time and getting
+`OpenSSL::Cipher::CipherError:` it may be trying to reference
+the wrong `master.key`. Either know the production key or delete
+and regenerate a new one
+`rm config/credentials.yml.enc config/master.key; EDITOR=cat rails credentials:edit`
 
 Add needed gems
 
