@@ -1,7 +1,7 @@
 de:
   privacy_policy: Datenschutz
   tos: Nutzungsbedingungen (AGB)
-  home: Home
+  home: Startseite
   diary: Ihre Aufzeichnungen
   about: Über
   faq: Hilfe/FAQ
@@ -27,7 +27,7 @@ de:
     one: Gestern
     other: 'Vor %{count} Tagen'
   upload_data: Standortdaten<br />hochladen
-  draghere: Hierher ziehen or klicken, um auszuwählen
+  draghere: Hierher ziehen oder klicken, um auszuwählen
   send: Senden
   log: Ihre Aufzeichnungen
   log_created: Eintrag erfolgreich gespeichert
@@ -56,7 +56,16 @@ de:
     Sie können Ihr Profil löschen, indem Sie auf den untenstehenden Button klicken. 
     ACHTUNG! Die Löschung erfolgt sofort und dauerhaft und kann nicht rückgängig gemacht werden!
     Wenn Ihr Profil gelöscht wird, werden alle Ihre Einträge ebenfalls sofort gelöscht.
-
+  add_place_title: Einen neuen Ort hinzufügen
+  placename: Name des Ortes
+  chooseicon: Ein Icon auswählen
+  address: Adresse
+  address1: Straßenname
+  postalcode: Postleitzahl
+  city: Ort
+  add_place: Ort hinzufügen
+  people_num: Zahl der Leute, die meist dabei sind
+  person_names: Namen näherer Kontakte, die meist dabei sind
 
   import_ok: Einträge wurden erfolgreich importiert
   import_empty: Datei wurde erfolgreich hochgeladen, enthält aber keine verwendbaren Daten
@@ -65,7 +74,8 @@ de:
   tos_page: Nutzungsbedingungen und Datenschutzerklärung
   tos_required: Die Zustimmung zu den Nutzungsbedingungen und zur Datenschutzerklärung ist erforderlich, um diesen Dienst zu nutzen.
   tos_not_accepted: Die Zustimmung zu den Nutzungsbedingungen und zur Datenschutzerklärung ist erforderlich.
-  marketing_mails: Ich möchte Ankündigungen vom Pisarasi erhalten, z. Informationen zu neuen Funktionen. Beachten Sie, dass wir Ihnen weiterhin E-Mails über Richtlinienänderungen senden können, auch wenn Sie Ankündigungen ablehnen.
+  save: Speichern
+  marketing_mails: Ich möchte Benachrichtigungen vom Pisarasi erhalten, z. B. Informationen zu neuen Funktionen. Beachten Sie, dass wir Ihnen weiterhin E-Mails über Richtlinienänderungen senden können, auch wenn Sie Ankündigungen ablehnen.
   save: Speichern
 
   account_already: Bereits registriert?
@@ -75,3 +85,4 @@ de:
   forgot_pass: Passwort vergessen?
   forgot_instructions: E-Mail zum Zurücksetzen des Passworts anfordern
   signin: Anmelden
+
