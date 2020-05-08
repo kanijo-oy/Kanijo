@@ -1,13 +1,19 @@
-<h4><%=h place.name%> <%=fas(place.icon)%> <%=link_to fas('edit'), edit_place_path(place)%>
-<%=link_to fas('trash'), place_path(place), method: 'delete', title: t(:delete), data: { confirm: t(:delete_confirm) } %>
-</h4>
-<p>
-<%=h place.address1%><br />
-<%=h place.postalcode%> <%=place.city%><br />
-</p>
-<p>
-I share space usually with <%=h place.num_people%> people.
-<% if place.persons -%>
-  Close contacts: <%=h place.persons%>
-<% end %>
-</p>
+<h4><%=fas(place.icon)%> <%=h place.name%></h4>
+<div class="row">
+  <div class="col-6">
+    <p>
+    <%=h place.address1%><br />
+    <%=h place.postalcode%> <%=place.city%><br />
+    <%=t :people_num %>: <%=h place.num_people%>
+    </p>
+  </div>
+  <div class="col">
+    <% if place.persons -%>
+      <%=raw h(place.persons).gsub(/(, +|\n)/, '<br />')%>
+    <% end %>
+  </div>
+  <div class="col-1">
+    <%=link_to fas('edit'), edit_place_path(place)%>
+    <%=link_to fas('trash'), place_path(place), method: 'delete', title: t(:delete), data: { confirm: t(:delete_confirm) } %>
+  </div>
+</div>

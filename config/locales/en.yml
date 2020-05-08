@@ -3,6 +3,7 @@ en:
   tos: Terms of service
   home: Home
   diary: Diary
+  places: Places
   about: About
   faq: QA
   profile: Profile
@@ -65,8 +66,11 @@ en:
   postalcode: Postal code
   city: City
   add_place: Add place
-  people_num: People I usually am with
-  person_names: Names close contacts typically in this place
+  people_num: Total number of people usually in this place
+  person_names: Names of people in this place
+  place_created: Place added
+  place_updated: Place updated
+  place_deleted: Place deleted
 
 
   import_ok: Log entries imported successfully

@@ -4,6 +4,7 @@ fi:
   tos: Käytötehdot
   home: Etusivu
   diary: Päiväkirja
+  places: Paikat
   about: Tietoja
   faq: UKK
   profile: Käyttäjätiedot
@@ -68,6 +69,9 @@ fi:
   add_place: Lisää paikka
   people_num: Samassa paikassa muita henkilöitä
   person_names: Tässä paikassa yleensä lähikontaktissa olevien henkilöiden nimet
+  place_created: Paikka lisätty
+  place_updated: Paikka muutettu
+  place_deleted: Paikka poistettu
 
   import_ok: Merkinnät tuotu onnistuneesti
   import_empty: Lähetys onnistui, mutta tiedostosta ei löytynyt merkintöjä, joita voisimme käyttää.
