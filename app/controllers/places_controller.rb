@@ -3,6 +3,7 @@ class PlacesController < ApplicationController
 
   def index
     @places = Place.for_user(current_user).all
+    @place = Place.new
   end
 
   def show
@@ -20,7 +21,7 @@ class PlacesController < ApplicationController
 
     respond_to do |format|
       if @place.save
-        format.html { redirect_to root_path, notice: t(:place_created) }
+        format.html { redirect_to places_path, notice: t(:place_created) }
         format.json { render :show, status: :created, location: @place }
       else
         format.html { render :new }
@@ -32,7 +33,7 @@ class PlacesController < ApplicationController
   def update
     respond_to do |format|
       if @place.update(place_params)
-        format.html { redirect_to root_path, notice: 'Place was successfully updated.' }
+        format.html { redirect_to places_path, notice: t(:place_updated) }
         format.json { render :show, status: :ok, location: @place }
         format.js { render :update }
       else
@@ -45,7 +46,7 @@ class PlacesController < ApplicationController
   def destroy
     @place.destroy
     respond_to do |format|
-      format.html { redirect_to root_path, notice: 'Place was successfully destroyed.' }
+      format.html { redirect_to places_path, notice: t(:place_deleted) }
       format.json { head :no_content }
       format.js { render :destroy }
     end

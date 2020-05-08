@@ -1,0 +1,11 @@
+<h2>Places</h2>
+<%@places.each do |p| %>
+  <%= render 'single', place: p %>
+  <hr />
+<% end %>
+
+<h3><%=t :add_place_title %></h3>
+<%= form_for(@place) do |f| %>
+  <%= render 'form', place: @place %>
+<% end %>
+
