@@ -1,4 +1,4 @@
-<h2><%=t :add_manual_entry %></h2>
+<h2 data-toggle="collapse" data-target="#add-entry"><%=t :add_manual_entry %></h2>
 <div class="collapse" id="add-entry" aria-expanded="false" aria-controls="add-entry">
 <%= form_with(model: @log, local: true) do |form| %>
 <div class="row mb-2">
@@ -72,7 +72,7 @@ dp.on('submit', function(d1, d2) {
 <i class='collapse-btn fas fa-chevron-double-down' id="add-entry-btn" data-toggle="collapse" data-target="#add-entry" aria-expanded="false" aria-controls="add-entry"></i>
 <hr />
 
-<h2>Upload data</h2>
+<h2 data-toggle="collapse" data-target="#upload-data">Upload data</h2>
 <div class="collapse" id="upload-data" aria-expanded="false" aria-controls="upload-data">
 
 <%= form_with(model: @google, local: true, id: 'gupload') do |form| %>
@@ -120,7 +120,7 @@ dp.on('submit', function(d1, d2) {
 <i class='collapse-btn fas fa-chevron-double-down' id="upload-data-btn" data-toggle="collapse" data-target="#upload-data" aria-expanded="false" aria-controls="upload-data"></i>
 <hr />
 
-<h2><%=t(:log)%></h2>
+<h2 data-toggle="collapse" data-target="#diary"><%=t(:log)%></h2>
 <div class="collapse" id="diary" aria-expanded="false" aria-controls="diary">
 <div id="log-entries" class="mb-4">
 <%
