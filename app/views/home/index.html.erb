@@ -1,69 +1,65 @@
-<h2 class="pt-4"><%=t :add_manual_entry %></h2>
+<h2><%=t :add_manual_entry %></h2>
+<div class="collapse" id="add-entry" aria-expanded="false" aria-controls="add-entry">
 <%= form_with(model: @log, local: true) do |form| %>
 <div class="row mb-2">
   <div class='col'>
-    <%=form.text_field :description, size: 50, placeholder: t(:description_placeholder), class: 'form-control', title: t(:description_title) %>
-  </div>
-  <div class='col'>
-    <%=form.text_field :address, placeholder: 'Address', class: 'form-control' %>
-  </div>
-</div>
-  <!--
-<div class="row mb-2">
-  <div class='col'>
-    <%#=form.text_field :placename, placeholder: 'Name of the place', class: 'form-control' %>
-  </div>
-</div>
-  -->
-<div class="row">
-  <div id="day-col" class='col-3 mb-2'>
-    <%=form.text_field :day, size: 12, class: 'form-control', onclick: 'openCal()', title: t(:day_title) %>
-    <%# <%=image_tag 'calendar.png', height: 30, onclick: 'openCal()'%> 
-  </div>
-  <div id="time-col" class='col-2 mb-2'>
-    <%#=image_tag 'clock.png', height: 30%> 
-    <%=form.text_field :time, size: 4, class: 'form-control', title: t(:time_title) %>
-  </div>
-  <div id="all-day-col" class='col-2 pl-0 mb-2'>
-    <div class="form-check">
-      <%=form.check_box :all_day, class: 'form-check-input', onclick: 'allDay()', title: t(:all_day_title) %>
-      <label class="form-check-label" for="all_day"><%=t :all_day%></label>
+    <div class="field form-group">
+      <%=form.label :place, t(:description) %>
+      <%=form.text_field :place, size: 50, placeholder: t(:description_placeholder), class: 'form-control', title: t(:description_title) %>
+    </div>
+    <div class="field form-group">
+      <%=form.label :address, t(:address) %>
+      <%=form.text_field :address, placeholder: t(:address_placeholder), class: 'form-control' %>
+    </div>
+    <div class="field form-group">
+      <%=form.label :day, t(:day) %>
+      <%=form.text_field :day, size: 12, class: 'form-control', onclick: 'openCal()', title: t(:day_title) %>
+      <%#=image_tag 'calendar.png', height: 30, onclick: 'openCal()'%> 
     </div>
   </div>
-  <div class='col-3 mb-2'>
-    <%#=form.text_field :duration, size: 4, class: 'form-control', placeholder: 'Duration', title: 'How long did you spend here' %>
-    <%=form.select :duration, options_for_select([['<15min', 1],['>15min', 2]], form.object.duration), {}, class: 'form-control', title: 'How long did you spend here' %>
+  <div class='col'>
+    TODO: make them work<br />
+    <% current_user.places.each do |p| %>
+      <%=fas(p.icon)%> <%=h p.name%><br />
+    <% end %>
   </div>
 </div>
-<div class="row">
-  <div id="no-people-col" class='col-4 mb-2'>
-    <%#=form.text_field :contacts, size: 4, placeholder: t(:num_people), class: 'form-control' %>
-    <%=form.select :contacts, options_for_select([t(:num_people)] + LogEntry.num_options), {}, class: 'form-control', title: t(:contacts_title) %>
-  </div>
-  <div class='col-5 mb-2'>
-    <%=form.text_field :persons, size: 4, class: 'form-control', placeholder: 'Names of people', title: 'Who where you in contact with?' %>
-  </div>
-  <div id="submit-col" class='col-3 mb-2'>
+      <%=form.label :foo, t(:time_title) %>
+    <div class="field form-group" style="padding-left: 1.25rem">
+      <%=form.check_box :all_day, class: 'form-check-input', onclick: 'allDay(this.checked)', title: t(:all_day_title) %>
+      <label class="form-check-label" for="all_day"><%=t :all_day%></label>
+    </div>
+    <div class="field form-group form-inline">
+        <%=form.label :arrival, 'Arrival time' %>&nbsp;
+        <%=form.text_field :arrival, size: 4, class: 'form-control time-edit', title: t(:time_title) %>
+        <span style="padding-left: 1.5rem"></span>
+        <%=form.label :departure, 'Departure time' %>&nbsp;
+        <%=form.text_field :departure, size: 4, class: 'form-control time-edit', title: t(:time_title) %>
+    </div>
+    <div class="field form-group">
+      <%=form.label :people_num, t(:contacts) %>
+    <%=form.select :people_num, options_for_select([t(:num_people)] + LogEntry.num_options), {}, class: 'form-control', title: t(:contacts_title) %>
+    </div>
+    <div class="field form-group">
+      <%=form.label :persons, t(:persons) %>
+    <%=form.text_area :persons, size: 4, class: 'form-control', placeholder: 'Names of people', title: 'Who where you in contact with?', rows: 5 %>
+    </div>
     <%=form.submit t(:add), class: 'btn btn-primary', style: 'width: 100%', title: t(:add_title) %>
   </div>
-</div>
 <% end %>
 <script>
-  var dp = new SimplePicker({disableTimeSection: false, compactMode: true});
+var dp = new SimplePicker({disableTimeSection: false, compactMode: true});
 function openCal() {
   dp.open();
   dp.disableTimeSection();
 }
-function allDay(x) {
-  // console.log('time val: ' + $('#log_entry_time').val());
-  // console.log('disabled: ' + $('#log_entry_time').prop('disabled'));
-  // console.log('check val: ' + $('#log_entry_all_day').prop('checked'));
-  if($('#log_entry_all_day').prop('checked')) {
-    $('#log_entry_time').val('').prop('disabled', true);
+function allDay(checked) {
+  if (checked) {
+    $('.time-edit').val('').prop('disabled', true);
   } else {
-    var x = new Date;
-    x = x.toTimeString().substr(0,5);
-    $('#log_entry_time').val(x).prop('disabled', false);
+    var ts = new Date;
+    ts = ts.toTimeString().substr(0,5);
+    $('.time-edit').val(ts).prop('disabled', false);
   }
 }
 dp.on('submit', function(d1, d2) {
@@ -71,7 +67,13 @@ dp.on('submit', function(d1, d2) {
   $('#log_entry_day').val(ts.format("YYYY-MM-DD"));
 });
 </script>
+</div>
+
+<i class='collapse-btn fas fa-chevron-double-down' id="add-entry-btn" data-toggle="collapse" data-target="#add-entry" aria-expanded="false" aria-controls="add-entry"></i>
 <hr />
+
+<h2>Upload data</h2>
+<div class="collapse" id="upload-data" aria-expanded="false" aria-controls="upload-data">
 
 <%= form_with(model: @google, local: true, id: 'gupload') do |form| %>
 <div id="gmaps-data">
@@ -113,8 +115,13 @@ dp.on('submit', function(d1, d2) {
   <hr class="mb-4" />
 </div>
 <% end %>
+</div>
+
+<i class='collapse-btn fas fa-chevron-double-down' id="upload-data-btn" data-toggle="collapse" data-target="#upload-data" aria-expanded="false" aria-controls="upload-data"></i>
+<hr />
 
 <h2><%=t(:log)%></h2>
+<div class="collapse" id="diary" aria-expanded="false" aria-controls="diary">
 <div id="log-entries" class="mb-4">
 <%
 curdate= nil
@@ -130,3 +137,18 @@ curdate= nil
 </div>
 
 <%= link_to 'Export to PDF', print_log_entries_path(format: 'pdf') %>
+</div>
+<i class='collapse-btn fas fa-chevron-double-down' id="diary-btn" data-toggle="collapse" data-target="#diary" aria-expanded="false" aria-controls="diary"></i>
+<hr />
+
+<script>
+  $("#add-entry").on('show.bs.collapse hide.bs.collapse', function(){
+    $("#add-entry-btn").toggleClass('fa-chevron-double-down').toggleClass('fa-chevron-double-up');
+  });
+  $("#upload-data").on('show.bs.collapse hide.bs.collapse', function(){
+    $("#upload-data-btn").toggleClass('fa-chevron-double-down').toggleClass('fa-chevron-double-up');
+  });
+  $("#diary").on('show.bs.collapse hide.bs.collapse', function(){
+    $("#diary-btn").toggleClass('fa-chevron-double-down').toggleClass('fa-chevron-double-up');
+  });
+</script>

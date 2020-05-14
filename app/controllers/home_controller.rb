@@ -1,8 +1,11 @@
 class HomeController < ApplicationController
   def index
-    @log = LogEntry.new(day: Date.today, time: Time.now.localtime.strftime("%H:%M"))
+    ts = LogEntry.for_user(current_user).where(day: Date.today).maximum(:departure)
+    ts = ts.strftime("%H:%M") if ts
+    ts ||= '08:00'
+    @log = LogEntry.new(day: Date.today, arrival: ts)
     @google = Gloc.new()
-    @entries = LogEntry.all.where(user: current_user).order('day desc', 'time desc')
+    @entries = LogEntry.for_user(current_user).all.order('day desc', 'arrival desc')
   end
 
   def policy

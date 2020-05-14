@@ -11,12 +11,11 @@
     </div>
   <% end %>
 
-    <%= form.text_field :time, size: 5, title: 'Time' %>
-    <%= form.select :duration, options_for_select([['<15min', 1],['>15min', 2]], form.object.duration), title: 'Duration' %>
-    <%= form.text_field :description, size: 20, title: 'Description' %>
-    <%#= form.text_field :placename, size: 20, title: 'Place' %>
+    <%= form.text_field :arrival, size: 5, title: 'Arrival' %>
+    <%= form.text_field :departure, size: 5, title: 'Departure' %>
+    <%= form.text_field :place, size: 20, title: 'Place' %>
     <%= form.text_field :address, size: 20, title: 'Address' %>
-    <%= form.select :contacts, options_for_select(LogEntry.num_options, form.object.contacts), {}, class: '', title: 'Number of contacts' %>
+    <%= form.select :people_num, options_for_select(LogEntry.num_options, form.object.people_num), {}, class: '', title: 'Number of contacts' %>
     <%= form.text_field :persons, size: 20, title: 'Names of contacts' %>
 
     <%= form.submit 'Save' %>

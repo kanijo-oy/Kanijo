@@ -18,8 +18,8 @@ prawn_document do |pdf|
 
   curdate = nil
   tbl = []
-  tbl << ['Date', 'Time of entry', 'Duration', 'Place name', 'Place address', '# of people', 'Names of people']
-  @log_entries.sort_by {|e| [e.day, e.time]}.each do |e|
+  tbl << ['Date', 'Time of entry', 'Departure', 'Place name', 'Place address', '# of people', 'Names of people']
+  @log_entries.sort_by {|e| [e.day, e.arrival]}.each do |e|
 =begin
     if e.day != curdate
       curdate = e.day
@@ -31,12 +31,12 @@ prawn_document do |pdf|
       end
     end
     entry = ""
-    entry += e.time + " " if e.time
-    entry += e.description
-    entry += ' (' + e.contacts + ' people present)' if e.contacts
+    entry += e.arrival + " " if e.arrival
+    entry += e.place
+    entry += ' (' + e.people_num + ' people present)' if e.people_num
     pdf.text entry
 =end
-    tbl << [e.day.strftime('%Y-%m-%d'), e.time, e.durationtext, e.description, e.address, e.contacts, e.persons]
+    tbl << [e.day.strftime('%Y-%m-%d'), e.arrival, e.departure, e.place, e.address, e.people_num, e.persons]
 
   end
   pdf.table tbl

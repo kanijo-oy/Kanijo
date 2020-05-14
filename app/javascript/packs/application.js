@@ -22,8 +22,12 @@ window.$ = $;
 window.asdd = ActiveStorageDragAndDrop;
 
 import { library, dom } from '@fortawesome/fontawesome-svg-core'
-import { fas } from '@fortawesome/free-solid-svg-icons'
+//import { fal } from '@fortawesome/pro-light-svg-icons'
+import { fas } from '@fortawesome/pro-solid-svg-icons'
+//import { fat } from '@fortawesome/pro-regular-svg-icons'
+//library.add(fal)
 library.add(fas)
+//library.add(fat)
 dom.watch()
 
 import SimplePicker from 'simplepicker'
