@@ -1,19 +1,18 @@
 class LogEntry < ApplicationRecord
   validates_presence_of :day
-  validates_presence_of :description
+  validates_presence_of :place
 
   belongs_to :user
 
   scope :for_user, ->(user) { where(user: user) }
 
-  def time
+  def arrival
     return '' unless super && super.time
     super.time.strftime('%H:%M')
   end
-
-  def durationtext
-    return '' unless duration
-    ['?', '<15min', '>15min'][duration]
+  def departure
+    return '' unless super && super.time
+    super.time.strftime('%H:%M')
   end
 
   def self.num_options

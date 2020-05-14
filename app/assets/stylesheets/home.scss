@@ -119,6 +119,15 @@ label.asdndzone {
   }
 }
 
+.collapse-btn {
+  font-size: 15pt;
+  margin-top: 0.5em;
+}
+.collapse-btn + hr {
+  margin: 0px;
+  margin-bottom: 1em;
+}
+
 
 // Prevent datepicker from being covered by the navbar.
 .simplepicker-wrapper {

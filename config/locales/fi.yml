@@ -66,7 +66,7 @@ fi:
   address1: Katuosoite
   postalcode: Postinumero
   city: Kaupunki
-  add_place: Lisää paikka
+  add_place: Tallenna paikka
   people_num: Samassa paikassa muita henkilöitä
   person_names: Tässä paikassa yleensä lähikontaktissa olevien henkilöiden nimet
   place_created: Paikka lisätty

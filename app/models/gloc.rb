@@ -21,7 +21,7 @@ class Gloc < ApplicationRecord
           next unless place.is_a? Hash
           next unless place.dig('TimeSpan', 'begin')
           ts = Time.parse(place['TimeSpan']['begin'])
-          LogEntry.new(day: ts, time: ts, description: place['name'], user: user).save
+          LogEntry.new(day: ts, arrival: ts, place: place['name'], user: user).save
           cc += 1
         end
       end

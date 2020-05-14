@@ -11,14 +11,20 @@ en:
   current_lang: Language selection
 
   add_manual_entry: Add manually
-  description_placeholder: Where have you been?
+  description: Place
+  description_placeholder: Enter place where you were
   description_title: Enter description for the log entry
   time_title: Log entry time
+  address_placeholder: Enter place address
+  day: Date
   all_day: All day
   all_day_title: Is entry all day
   day_title: Select date
   num_people: '# of people'
+  contacts: People in this place
   contacts_title: Select how many people shared the space with you for this log entry
+  persons: Names of people in this place
+  time_title: Time
   add: Add
   add_title: Add entry
   use_gmaps: Use Google Timeline data
@@ -65,7 +71,7 @@ en:
   address1: Street address
   postalcode: Postal code
   city: City
-  add_place: Add place
+  add_place: Save place
   people_num: Total number of people usually in this place
   person_names: Names of people in this place
   place_created: Place added

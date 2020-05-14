@@ -24,7 +24,7 @@ class PlacesController < ApplicationController
         format.html { redirect_to places_path, notice: t(:place_created) }
         format.json { render :show, status: :created, location: @place }
       else
-        format.html { render :new }
+        format.html { render :edit }
         format.json { render json: @place.errors, status: :unprocessable_entity }
       end
     end
