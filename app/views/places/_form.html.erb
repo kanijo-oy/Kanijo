@@ -12,12 +12,15 @@
   <% end %>
   <div class="field form-group">
     <%= f.label :name, t(:placename) %>
-    <%= f.text_field :name, class: 'form-control' %>
+    <%= f.text_field :name, class: 'form-control', onchange: 'checkEnable()' %>
   </div>
   <div class="field form-group">
     <%= f.label :icon, t(:chooseicon) %>
-    <%#= f.text_field :icon, class: 'form-control' %>
-    <%= f.select :icon, options_for_select(Place.iconlist, place.icon), {}, class: 'form-control' %>
+    <%= f.hidden_field :icon %>
+    <%#= f.select :icon, options_for_select(Place.iconlist, place.icon), {}, class: 'form-control' %>
+    <% Place.iconlist.each do |ico| %>
+      <i class='fas fa-<%=ico%> placeicon <%='placeicon-selected' if f.object.icon == ico %>' onclick='selectIcon(this, "<%=ico%>")'></i>
+    <% end %>
   </div>
 
   <%=t(:address)%>
@@ -30,8 +33,8 @@
   <div class="field form-group">
     <%= f.text_field :city, autocomplete: 'address-level2', class: 'form-control', placeholder: t(:city) %>
   </div>
-  <div class="field form-group form-inline">
-    <%= f.label :num_people, t(:people_num)%>&nbsp;
+  <div class="field form-group">
+    <%= f.label :num_people, t(:people_num)%>
     <%= f.number_field :num_people, min: 0, max: 100, class: 'form-control' %>
   </div>
   <div class="field form-group">
@@ -40,6 +43,19 @@
   </div>
 
   <div class="actions">
-    <%= f.submit t(:add_place), class: 'btn btn-primary' %>
+    <%= f.submit t(:add_place), class: 'btn btn-primary', id: 'place_submit' %>
   </div>
 <% end %>
+
+<script>
+function checkEnable() {
+  var val = $("#place_name").val();
+  $("#place_submit").prop('disabled', val == "");
+}
+checkEnable();
+function selectIcon(sel, icon) {
+  $(".placeicon").removeClass('placeicon-selected');
+  $(sel).addClass('placeicon-selected');
+  $("#place_icon").val(icon);
+}
+</script>
