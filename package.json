@@ -13,7 +13,7 @@
     "bootstrap": "^4.4.1",
     "jquery": "^3.4.1",
     "jquery-ui-dist": "^1.12.1",
-    "moment": "^2.24.0",
+    "moment": "^2.29.2",
     "popper.js": "^1.16.1",
     "simplepicker": "^2.0.1",
     "thedatepicker": "^0.5.5",
